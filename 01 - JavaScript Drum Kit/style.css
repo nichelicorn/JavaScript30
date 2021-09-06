@@ -1,6 +1,6 @@
 html {
-  font-size: 10px;
-  background: url('./background.jpg') bottom center;
+  font-size: 1rem;
+  background: url('./background.jpg') top center;
   background-size: cover;
 }
 
@@ -10,19 +10,37 @@ body,html {
   font-family: sans-serif;
 }
 
-.keys {
+body {
   display: flex;
-  flex: 1;
   min-height: 100vh;
   align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: aquamarine;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 2.5rem;
+  padding: 2rem;
+  text-align: center;
+  /* background-color: hsla(160, 100%, 75%, .5); */
+  text-shadow: fuchsia 1px 0 30px;
+  border-radius: 5rem;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  /* margin: 10rem; */
 }
 
 .key {
   border: .4rem solid black;
   border-radius: .5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
+  margin: 2rem;
+  font-size: 1.2rem;
   padding: 1rem .5rem;
   transition: all .07s ease;
   width: 10rem;
@@ -49,3 +67,16 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+footer {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+}
+
+a > :hover {
+  background-color: aquamarine;
+  color: darkblue;
+}
+
