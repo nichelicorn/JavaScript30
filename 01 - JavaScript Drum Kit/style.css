@@ -71,12 +71,19 @@ kbd {
 footer {
   color: white;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin: .5rem;
+}
+
+a {
   text-decoration: none;
-  position: fixed;
 }
 
-a > :hover {
+a:hover {
   background-color: aquamarine;
-  color: darkblue;
 }
 
+a:visited {
+  color: white;
+}
