@@ -1,19 +1,23 @@
 html {
-  background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-  background-size: cover;
+  color: white;
   font-family: 'Beth Ellen', cursive;
   text-align: center;
   font-size: 1rem;
 }
 
 body {
+  background: green url(https://images.pexels.com/photos/1998251/pexels-photo-1998251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   margin: 0;
-  /* font-size: 2rem; */
-  /* flex: 1; */
   min-height: 100vh;
   align-items: center;
+}
+
+h1,
+h3 {
+  margin: .1rem;
 }
 
 .clock {
