@@ -83,12 +83,12 @@
       
       const seconds = now.getSeconds();
       const secondsDegrees = ((seconds / 60) * 360) + 90;
-
-      if ((secondsDegrees - 90) === 360) {
+      if ( seconds === 0 ) {
         console.log("transition thing");
         console.log("seconds <>>>", seconds);
+        secondHand.style.transition = "none";
+        // line 90 has an error: none is not defined -- missing quotes
       }
-
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
       
       const minutes = now.getMinutes();
