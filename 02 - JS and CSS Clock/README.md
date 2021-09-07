@@ -1,5 +1,7 @@
 # JavaScript30 no. 2 - CSS & JS Clock
 
+## View the (clock)[https://codepen.io/nichelicorn/pen/mdwRPzj] on CodePen
+
 #### Goals
 * Add animation to clock hands to display current time
 * Use a rotate() animation
