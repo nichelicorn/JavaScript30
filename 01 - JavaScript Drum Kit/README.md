@@ -2,6 +2,8 @@
 
 A vanilla JavaScript project, inspired by Wes Bos' #JavaScript30 course.
 
+[See the SynPad live on Codepen!](https://codepen.io/nichelicorn/pen/ExXZKJm)
+
 ### What did I learn on this one?
 * the `event.keyCode` attribute can be used to determine which key is being pressed
 * the `KeyboardEvent.keyCode` feature is no longer recommended by [MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode)
