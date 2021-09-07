@@ -10,4 +10,6 @@
   * set values for time and date
   * convert the seconds / minutes / hours to degrees that can be interpreted into the representation of a clock
   * use this conversion to apply transition to clock hands
-  
+* Write functionality to remove blurry transition when minutes / seconds / hours rollover
+* Refactor
+
