@@ -1,5 +1,11 @@
-window.addEventListener('keydown', playSound);
+// 🌐  Global variables
+const keys = document.querySelectorAll(".key");
 
+// 👂 Event Listeners
+window.addEventListener('keydown', playSound);
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+// ⚙️ Functions
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -13,14 +19,6 @@ function playSound(e) {
 }
 
 function removeTransition(e) {
-  // console.log("event <>>>", e);
   if (e.propertyName !== "transform") return;
-    // skip it if it's not a transform
-  // console.log("propertyName <>>>", e.propertyName);
   this.classList.remove("playing");
 };
-
-const keys = document.querySelectorAll(".key");
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-
-
