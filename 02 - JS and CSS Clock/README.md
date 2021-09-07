@@ -1,6 +1,8 @@
 # JavaScript30 no. 2 - CSS & JS Clock
 
-## View the (clock)[https://codepen.io/nichelicorn/pen/mdwRPzj] on CodePen
+A clock that lives on the Internet, made with vanilla JavaScript
+
+[See the clock live on Codepen!](https://codepen.io/nichelicorn/pen/mdwRPzj)
 
 #### Goals
 * Add animation to clock hands to display current time
