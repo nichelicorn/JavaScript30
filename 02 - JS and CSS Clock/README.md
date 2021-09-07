@@ -13,3 +13,9 @@
 * Write functionality to remove blurry transition when minutes / seconds / hours rollover
 * Refactor
 
+#### Tidbits
+* Use (`transform`)[https://developer.mozilla.org/en-US/docs/Web/CSS/transform] CSS properties to apply animation styles to elements on the page
+  * It applies a (`<transform-function>`)[https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function] that will manipulate the element within its plane on the page
+  * Multiple formulas can be passed through for a single element
+* Transition effects can be manipulated by adding a (`transition-timing-function`)[https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function] rule which, "in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration."
+  * This applies a realistic appearance to moving elements, where a small recoil effect is visible

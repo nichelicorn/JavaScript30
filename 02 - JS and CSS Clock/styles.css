@@ -1,5 +1,4 @@
 html {
-  /* background: green url(https://images.pexels.com/photos/1998251/pexels-photo-1998251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center; */
   background:linear-gradient(0deg, rgba(255, 0, 149, 0.023), rgba(70, 43, 59, 0.8)), url(https://images.pexels.com/photos/7335068/pexels-photo-7335068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) bottom center;
   background-size: cover;
   color: white;
@@ -61,8 +60,8 @@ h3 {
   /* adds a ticking motion to the hands */
 }
 
-.hour-hand {
-  /* width: 35%; */
+.min-hand {
+  background: rgb(252, 210, 232);
 }
 
 .second-hand {
