@@ -10,3 +10,4 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 
 * Day 1 : [SynthPad](https://codepen.io/nichelicorn/pen/ExXZKJm)
 * Day 2 : [Clock on the Internet](https://codepen.io/nichelicorn/pen/mdwRPzj)
+* Day 3 : [CSS Variables](https://codepen.io/nichelicorn/pen/BaZpvxZ)
