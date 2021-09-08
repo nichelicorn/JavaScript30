@@ -1,0 +1,77 @@
+/* CSS Variables */
+:root {
+  --base: #7fffd4;
+  --spacing: 10px;
+  --blur: 5px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  width: 45%;
+}
+
+.hl {
+  color: var(--base);
+}
+
+/* Basic CSS styles */
+html {
+  background: #140337;  
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace ; 
+  font-size: 1.5rem;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100px;
+}
+
+footer {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.footWords {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footWords > p {
+  padding: 0 1rem 0 1rem;
+}
+
+a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: hsla(328, 100%, 54%, .5);
+  border-radius: 3rem;
+  padding: 0 .5rem 0 .5rem;
+}
+
+a:visited {
+  color: white;
+}
