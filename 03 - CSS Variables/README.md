@@ -2,13 +2,13 @@
 
 Learn about CSS variables!
 
-[See the clock live on Codepen!](https://codepen.io/nichelicorn/pen/mdwRPzj)
+[Play with CSS on Codepen!](https://codepen.io/nichelicorn/pen/BaZpvxZ)
 
 #### Goals
-* Explore *new* CSS variables feature
-  * these variables can be updated during runtime using JavaScript!
+* Explore *new* [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) feature
+  * these variables will be updated during runtime using JavaScript!
 * Work with `spacing`, `blur`, and `base-color` to test these features
-
+* Use JS to select CSS variables and manipulate them on the DOM
 
 #### Tidbits
 * How do CSS variables work? 
@@ -22,6 +22,5 @@ Learn about CSS variables!
 * Using a console.log to look at `this.dataset` should show all `data-` keys set on an HTML element
   * console.log("this.dataset <>>>", this.dataset);
   * logs an object containing the data attributes set by the the `data-thing` attribute in the HTML
-
 
 * an array has array methods built in; a `NodeList` *looks* like an array, but it isn't an array - it has a small list of prototypes available (`document.querySelectorAll` returns a `NodeList`, not an array)
