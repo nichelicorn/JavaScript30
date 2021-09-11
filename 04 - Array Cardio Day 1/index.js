@@ -62,7 +62,7 @@
       return total + (inventor.passed - inventor.year);
     }, 0);
 
-    console.log("total years lived by all inventors");
+    console.log("total years lived by all inventors <>>>");
     console.log(totalYears);
 
     // 5. Sort the inventors by years lived
@@ -74,7 +74,7 @@
       return first > second ? 1 : -1;
     })
 
-    console.log("inventors sorted by ascending age");
+    console.log("inventors sorted by ascending age <>>>");
     console.table(ageSortedInventors);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -91,7 +91,7 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    console.log("people sorted alphabetically by last name");
+    console.log("people sorted alphabetically by last name <>>>");
     const alphaPeople = () => {
       // const sortedFolks = people.sort((a, b) => {
       //   // console.log("a <>>>", a);
@@ -102,13 +102,11 @@
     
       const sortedFolks = people.sort((a, b) => {
         const [aLast, aFirst] = a.split(", ");
-        // console.log("last <>>>", last);
-        // console.log("first <>>>", first);
         const [bLast, bFirst] = b.split(", ");
         return aLast > bLast ? 1 : -1;
       });
 
-      console.table(sortedFolks);
+      console.log(sortedFolks);
     };
 
     alphaPeople();
@@ -120,8 +118,8 @@
     // return the number of times each of these items appears in the array
     const countItems = () => {
       const dataObj = data.reduce((obj, item) => {
-        console.log("item <>>>", item);
-        console.log("obj <>>>", obj);
+        // console.log("item <>>>", item);
+        // console.log("obj <>>>", obj);
 
         if (!obj[item]) {
           obj[item] = 0;
@@ -129,6 +127,9 @@
         obj[item]++;
         return obj;
       }, {} );
+
+      console.log("transportation devices with number of occurrences <>>>");
+      console.table(dataObj);
     };
 
     countItems();
