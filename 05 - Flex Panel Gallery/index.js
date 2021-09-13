@@ -7,7 +7,6 @@ panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
 
 // Functions
 function toggleOpen() {
-  console.log("hello")
   this.classList.toggle("open");
 }
 
