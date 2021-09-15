@@ -60,13 +60,13 @@
 
       // doesn't work if the id isn't found
     
-      findCommentById(823423);
+      findCommentById(123523);
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
-    
-    console.log({comments});
+    console.log("comments <>>>");
+    console.table(comments);
 
     // function deleteCommentById(id) {
     //   const text = comments.findIndex(comment => comment.id === id);
@@ -78,10 +78,24 @@
       const deleteCommentById = (id) => {
         const text = comments.findIndex(comment => comment.id === id);
         comments.splice(text, 1);
-      }
+      };
+
+    // rewrite the function and maintain the original dataset
+    // let updatedComments = [];
+
+    // function deleteCommentById(id) {
+    //   const text = comments.findIndex(comment => comment.id === id);
+    
+    //   updatedComments = [
+    //     ...comments.slice(0, text),
+    //     ...comments.slice(text + 1)
+    //   ];
+    // };
 
     deleteCommentById(823423);
-    // console.log({comments});
+    console.log("updated comments <>>>");
+    console.table(comments);
+    // console.table(updatedComments);
 
   </script>
 </body>
