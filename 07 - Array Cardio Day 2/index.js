@@ -50,12 +50,16 @@ console.log({areAllOfAge});
 // }
 
 // doesn't work if the id isn't found
+// rewrite to account for unfound ids
 const findCommentById = (id) => {
   const text = comments.find(comment => comment.id === id);
   console.log({text});
-}
+  if (!text) {
+    console.log("The requested message was not found. We're so very sorry for the inconvenience. Have this 🪴.");
+  }
+};
 
-findCommentById(123523);
+findCommentById(1);
 
 
 // Array.prototype.findIndex()
