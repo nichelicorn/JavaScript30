@@ -14,7 +14,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 4 : [Array Workout 1](https://codepen.io/nichelicorn/pen/NWgjENe)
 * Day 5 : [Flex Panels](https://codepen.io/nichelicorn/pen/rNwzWJq)
 * Day 6 : [Type Ahead Search Display](https://codepen.io/nichelicorn/pen/rNwGJxG )
-<!-- * Day 7 : []() -->
+* Day 7 : [Array Workout 2](https://codepen.io/nichelicorn/pen/RwgjJqz)
 <!-- * Day 8 : []() -->
 <!-- * Day 9 : []() -->
 <!-- * Day 10 : []() -->
