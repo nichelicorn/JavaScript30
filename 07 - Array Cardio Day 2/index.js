@@ -53,9 +53,10 @@ console.log({areAllOfAge});
 // rewrite to account for unfound ids
 const findCommentById = (id) => {
   const text = comments.find(comment => comment.id === id);
-  console.log({text});
   if (!text) {
     console.log("The requested message was not found. We're so very sorry for the inconvenience. Have this 🪴.");
+  } else {
+    console.log("Requested comment <>>>", text.text);
   }
 };
 
@@ -77,6 +78,11 @@ console.table(comments);
   // rewrite as an arrow function
   const deleteCommentById = (id) => {
     const text = comments.findIndex(comment => comment.id === id);
+    console.log({text});
+    if (text === -1) {
+      console.log("The requested message was not found. We're so very sorry for the inconvenience. Have this 🪴.");
+      return;
+    }
     comments.splice(text, 1);
   };
 
@@ -92,7 +98,7 @@ console.table(comments);
 //   ];
 // };
 
-deleteCommentById(823423);
+deleteCommentById(123523);
 console.log("updated comments <>>>");
 console.table(comments);
 // console.table(updatedComments);
