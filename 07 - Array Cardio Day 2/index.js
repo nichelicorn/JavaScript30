@@ -17,19 +17,19 @@ const comments = [
 ];
 
 // Some and Every Checks
-// Array.prototype.some() // is at least one person 19 or older?
+// 🧪 Array.prototype.some() // is at least one person 19 or older?
 // const isAdult = people.some(person => {
 //   const currentYear = (new Date()).getFullYear();
 //     return currentYear - person.year >= 19;
 // });
 
-// rewrite as a single line arrow function
+// 🧪  rewrite as a single line arrow function
 const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
 
 console.log("isAdult <>>>", {isAdult});
 
 
-// Array.prototype.every() // is everyone 19 or older?
+// 🧪  Array.prototype.every() // is everyone 19 or older?
 const areAllOfAge = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
 
 console.log({areAllOfAge});
@@ -37,20 +37,20 @@ console.log({areAllOfAge});
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
-// find the comment with the ID of 823423
+// 🧪  find the comment with the ID of 823423
 // function findCommentById(id) {
 //   const text = comments.find(comment => comment.id === id);
 //   console.log(comment.text);
 // }
 
-// rewrite as an arrow function
+// 🧪  rewrite as an arrow function
 // const findCommentById = (id) => {
 //   console.log(`comment id ${id} :`, (comments.find(comment => comment.id === id).text));
 //   // return comments.find(comment => comment.id === id).text;
 // }
 
 // doesn't work if the id isn't found
-// rewrite to account for unfound ids
+// 🧪  rewrite to account for unfound ids
 const findCommentById = (id) => {
   const text = comments.find(comment => comment.id === id);
   if (!text) {
@@ -63,7 +63,7 @@ const findCommentById = (id) => {
 findCommentById(1);
 
 
-// Array.prototype.findIndex()
+// 🧪  Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
 console.log("comments <>>>");
@@ -75,7 +75,7 @@ console.table(comments);
 //   comments.splice(text, 1);  
 // };
 
-  // rewrite as an arrow function
+  // 🧪  rewrite as an arrow function
   const deleteCommentById = (id) => {
     const text = comments.findIndex(comment => comment.id === id);
     console.log({text});
@@ -86,7 +86,7 @@ console.table(comments);
     comments.splice(text, 1);
   };
 
-// rewrite the function and maintain the original dataset
+// 🧪  rewrite the function and maintain the original dataset
 // let updatedComments = [];
 
 // function deleteCommentById(id) {
