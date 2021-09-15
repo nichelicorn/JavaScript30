@@ -26,15 +26,62 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
+
+    // const isAdult = people.some(person => {
+    //   const currentYear = (new Date()).getFullYear();
+    //     return currentYear - person.year >= 19;
+    // });
+
+    // rewrite as a single line arrow function
+    const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log("isAdult <>>>", {isAdult});
+    // using curlies around the variable name will print the variable name in the console with its value
+
     // Array.prototype.every() // is everyone 19 or older?
+
+    const areAllOfAge = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log({areAllOfAge});
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
+    // function findCommentById(id) {
+    //   const text = comments.find(comment => comment.id === id);
+    //   console.log(comment.text);
+    // }
+
+    // rewrite as an arrow function
+      const findCommentById = (id) => {
+        console.log(`comment id ${id} :`, (comments.find(comment => comment.id === id).text));
+        // return comments.find(comment => comment.id === id).text;
+      }
+
+      // doesn't work if the id isn't found
+    
+      findCommentById(823423);
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+    
+    console.log({comments});
+
+    // function deleteCommentById(id) {
+    //   const text = comments.findIndex(comment => comment.id === id);
+    //   // console.log({text});
+    //   comments.splice(text, 1);  
+    // };
+
+      // rewrite as an arrow function
+      const deleteCommentById = (id) => {
+        const text = comments.findIndex(comment => comment.id === id);
+        comments.splice(text, 1);
+      }
+
+    deleteCommentById(823423);
+    // console.log({comments});
 
   </script>
 </body>
