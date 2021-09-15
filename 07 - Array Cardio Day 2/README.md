@@ -2,7 +2,7 @@
 
 More practice with array methods!
 
-[There is code to visit on CodePen!]()
+[There is code to visit on CodePen!](https://codepen.io/nichelicorn/pen/RwgjJqz)
 
 #### Goals
 * Practice a few new array methods
