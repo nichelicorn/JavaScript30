@@ -44,25 +44,14 @@ function draw(e) {
   [lastX, lastY] = [e.offsetX, e.offsetY];   // resets the values of lastX/Y to create new lines at the starting point
 
   setLineColor();
-
-  // Set line width animation
-  // if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-  // direction = !direction;
-  // };
-  // if (direction) {
-  // ctx.lineWidth++
-  // } else {
-  // ctx.lineWidth--;
-  // };
   setLineWidth();
 }
 
 function setLineColor() {
   hue++;
-  // resets the hue value to 0
- if (hue >= 360) {
- hue = 0; 
- };
+  if (hue >= 360) {
+    hue = 0; 
+  };
 }
   
 function setLineStart(e) {
@@ -73,10 +62,6 @@ function setLineStart(e) {
 function setLineWidth() {
   if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
     direction = !direction;
-    };
-    if (direction) {
-    ctx.lineWidth++
-    } else {
-    ctx.lineWidth--;
-    };  
+  };
+  direction ? ctx.lineWidth++ : ctx.lineWidth--;  
 }
