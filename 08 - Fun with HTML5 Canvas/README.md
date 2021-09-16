@@ -11,7 +11,8 @@ Create a drawing tablet in the window!
 #### What did I learn?
 * The HTML `<canvas>` element is used to create a drawing space in the window
 
-* Use `canvas.getContext()` to set the environment for 2D or 3D rendering
+* Use `canvas.getContext()` to set the rendering environment
+  * Context  is where the drawing occurs; can be 2D or 3D (for video games / 3D rendering)
   * Context is constant once it is set - "it will always return the same drawing context instance as was returned the first time the method was invoked. It is not possible to get a different drawing context object on a given canvas element." 
   * `canvas.getContext()` is not fully supported in Safari and Internet Explorer
 
