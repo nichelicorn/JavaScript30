@@ -9,7 +9,7 @@ Create a drawing tablet in the window!
 * 
 
 #### What did I learn?
-* 
+* The HTML `<canvas>` element is used to create a drawing space in the window
 
 #### References
 * 
