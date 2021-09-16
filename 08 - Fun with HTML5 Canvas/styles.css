@@ -15,11 +15,9 @@ canvas {
 
 header,
 footer {
-  background: rgba(0, 0, 0, .4);
-  border-radius: 25px;
   font-family: 'Courier New', Courier, monospace;
   color: white;
-  text-justify:auto;
+  /* text-justify:auto; */
   text-align: center;
   margin: .5rem;
   padding: .5rem;

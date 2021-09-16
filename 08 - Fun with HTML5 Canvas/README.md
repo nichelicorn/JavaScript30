@@ -21,7 +21,12 @@ Create a drawing tablet in the window!
 * Lines are drawn using contextual rending methods
   * [`ctx.beginPath()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) : creates a new path for drawing by clearing the previous list of sub-paths (the XY coordinates of the previous line)
   * [`ctx.strokeStyle = style`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) : sets the color, gradient, or pattern to be used for each stroke / line
-  * [`ctx.moveTo()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo) : begins a new sub-path at the specfied coordinates
+  * [`ctx.moveTo()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo) : begins a new sub-path at the specfied coordinates; sets the starting point of a new line; does NOT render anything itself
+  * [`ctx.lineTo()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo) : adds additional coordinates to the current sub-path (an ending point for the line), allowing a line to be rendered; does NOT render anything itself
+  * [`ctx.stroke()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke) : strokes (outlines) a specified subpath with the current stroke style; strokes are aligned to the center of the path - half is drawn on the inner side and half on the outer side (if there is no style applied, the pen appears in a + pattern)
+
+* Use conditionals to quit a function if you don't need it to run under a falsy condition
+* Can use destructuring to reassign multiple variable values at once
 
 #### References
 * [`Canvas API` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)

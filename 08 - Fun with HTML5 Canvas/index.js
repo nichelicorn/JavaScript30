@@ -1,17 +1,17 @@
 // 🔎 Query selectors
 const canvas = document.getElementById("draw");
 const main = document.querySelector("main");
-// size up canvas to fit the window
 
 // 👂 Event listeners
-canvas.addEventListener("mousedown", (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
-  });
+canvas.addEventListener("mousedown", setLineStart);
+// canvas.addEventListener("mousedown", (e) => {
+//   isDrawing = true;
+//   [lastX, lastY] = [e.offsetX, e.offsetY];
+//   });
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => isDrawing = false);
 canvas.addEventListener("mouseout", () => isDrawing = false);
-  
+
 // 📐 Set Canvas properties
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight - (window.innerHeight * .2);
@@ -35,15 +35,13 @@ let direction = true;
 
 // ⚙️ Functions
 function draw(e) {
-  if (!isDrawing) return; // prevents the function from running when mouse is not down
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;   // Sets rainbow values on pen color
+  if (!isDrawing) return;
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
-  // start at an XY, move to new XY and draw in between
-  ctx.moveTo(lastX, lastY); // sets the starting point
-  ctx.lineTo(e.offsetX, e.offsetY); // these values are taken from the event
-  ctx.stroke(); // actually draws the line
-  // reset the values of lastX/Y to create new lines at the starting point
-  [lastX, lastY] = [e.offsetX, e.offsetY]; // can use destructuring to reassign both values in one line
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  [lastX, lastY] = [e.offsetX, e.offsetY];   // resets the values of lastX/Y to create new lines at the starting point
 
   // Set the color shift on the rainbow pen
   hue++;
@@ -62,4 +60,8 @@ function draw(e) {
   ctx.lineWidth--;
   };
 }
-
+  
+function setLineStart(e) {
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+}
