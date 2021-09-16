@@ -2,7 +2,7 @@
 
 Create a drawing tablet in the window!
 
-[Visit CodePen to draw some rainbows!](https://codepen.io/nichelicorn/pen/RwgjJqz)
+[Visit CodePen to draw some rainbows!](https://codepen.io/nichelicorn/pen/rNwpZMg)
 
 #### Goals
 * Learn the fundamentals of HTML Canvas
