@@ -1,8 +1,13 @@
 
   const canvas = document.getElementById("draw");
+  const main = document.querySelector("main");
+  console.log("main <>>>", main);
+  // console.log("main dimensions <>>>", main.innerWidth, " x ", main.innerHeight);
   // size up canvas to fit the window
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.height = window.innerHeight - (window.innerHeight * .2);
+  // canvas.width = main.offsetWidth - (main.offsetWidth * .1);
+  // canvas.height = main.offsetHeight - (main.offsetHeight * .1);
   
   // need to add a context - this is where the drawing occurs; can be 2D or 3D (for video games / 3D rendering)
   const ctx = canvas.getContext("2d");
