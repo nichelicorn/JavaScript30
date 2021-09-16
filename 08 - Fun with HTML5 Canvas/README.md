@@ -6,7 +6,6 @@ Create a drawing tablet in the window!
 
 #### Goals
 * Learn the fundamentals of HTML Canvas
-* 
 
 #### What did I learn?
 * The HTML `<canvas>` element is used to create a drawing space in the window
@@ -30,6 +29,7 @@ Create a drawing tablet in the window!
 * Can use destructuring to reassign multiple variable values at once
 
 #### References
+* [JavaScript30](https://javascript30.com/)
 * [`Canvas API` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 * [`HTMLCanvasElement.getContext()` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)
 * [`CanvasRenderingContext2D` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
