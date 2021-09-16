@@ -43,23 +43,18 @@ function draw(e) {
   ctx.stroke();
   [lastX, lastY] = [e.offsetX, e.offsetY];   // resets the values of lastX/Y to create new lines at the starting point
 
-  // Set the color shift on the rainbow pen
-  // hue++;
-  //  // resets the hue value to 0
-  // if (hue >= 360) {
-  // hue = 0; 
-  // };
   setLineColor();
 
   // Set line width animation
-  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-  direction = !direction;
-  };
-  if (direction) {
-  ctx.lineWidth++
-  } else {
-  ctx.lineWidth--;
-  };
+  // if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+  // direction = !direction;
+  // };
+  // if (direction) {
+  // ctx.lineWidth++
+  // } else {
+  // ctx.lineWidth--;
+  // };
+  setLineWidth();
 }
 
 function setLineColor() {
@@ -73,4 +68,15 @@ function setLineColor() {
 function setLineStart(e) {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
+}
+
+function setLineWidth() {
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+    direction = !direction;
+    };
+    if (direction) {
+    ctx.lineWidth++
+    } else {
+    ctx.lineWidth--;
+    };  
 }
