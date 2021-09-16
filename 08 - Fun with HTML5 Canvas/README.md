@@ -1,11 +1,12 @@
 # JavaScript30 no. 8 - Fun with HTML5 Canvas
 
-<!-- More practice with array methods! -->
+Create a drawing tablet in the window!
 
-<!-- [There is code to visit on CodePen!](https://codepen.io/nichelicorn/pen/RwgjJqz) -->
+[Visit CodePen to draw some rainbows!](https://codepen.io/nichelicorn/pen/RwgjJqz)
 
 #### Goals
 * Learn the fundamentals of HTML Canvas
+* 
 
 #### What did I learn?
 * 
