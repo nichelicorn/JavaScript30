@@ -1,3 +1,6 @@
+// 🔎 Query selectors
+const output = document.getElementById("output");
+
 let codeToVisualize = {}
 ;
 
@@ -89,7 +92,9 @@ console.table(dogs);
 // 🪟 Console in the Window
 const visualConsole = console.log;
 
-
+function displayConsole() {
+  
+};
 
 
 codeToVisualize = {
