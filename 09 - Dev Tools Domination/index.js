@@ -89,15 +89,20 @@ console.table(dogs);
 // 🪟 Console in the Window
 const visualConsole = console.log;
 
-console.log = function() {
-  const message = [].join.call(arguments, " ");
-  $(".output").text(message);
-  visualConsole.apply(console, arguments);
-}
-console.log(dogs);
+
 
 
 codeToVisualize = {
   ...dogs,
   
 };
+
+// rethink this - set the output as an element
+// return an innerHTML that displays the code in a div
+
+// console.log = function() {
+//   const message = [].join.call(arguments, " ");
+//   $(".output").text(message);
+//   visualConsole.apply(console, arguments);
+// }
+// console.log("👻");
