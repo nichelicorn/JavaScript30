@@ -1,10 +1,11 @@
 // 🔎 Query selectors
 const output = document.getElementById("output");
 const h1 = document.querySelector("h1");
+const btnSec = document.getElementById("btnSec");
 
 // 👂 Event listeners
+window.addEventListener("load", buildConsoleView);
 h1.addEventListener("click", makeGreen);
-
 
 // const codeToVisualize = {};
 
@@ -152,3 +153,20 @@ window.addEventListener("click", logFunctions.domElement);
 // };
 // console.log("hello", "my", "name", "is", "shantharuban");
 
+// 🛠 View builder
+function buildConsoleView() {
+  btnSec.innerHTML = "";
+
+  const btnNames = Object.keys(logFunctions);
+  // console.log("btnNames <>>>", btnNames);
+  btnNames.map(btn => {
+    console.log("btn <>>>", btn);
+    btnSec.innerHTML+= `
+      <button id=${btn}>${btn}</button>
+    `;
+  });
+
+  btnNames.map(btn => {
+    console.log(`${btn}Btn`);
+  });
+}
