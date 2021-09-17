@@ -3,8 +3,8 @@ const output = document.getElementById("output");
 const h1 = document.querySelector("h1");
 const btnSec = document.getElementById("btnSec");
 const displaySec = document.getElementById("displaySec");
+let buttonNodes = [];
 let buttons = [];
-
 
 // 👂 Event listeners
 window.addEventListener("load", buildConsoleView);
@@ -12,7 +12,7 @@ h1.addEventListener("click", makeGreen);
 
 // Datasets
 const dogs = [
-  { name: 'Snickers', age: 2 }, 
+  { name: 'Snickers', age: 2 },
   { name: 'Hugo', age: 8 }
 ];
 
@@ -26,33 +26,35 @@ function buildConsoleView() {
   btnNames.map(name => {
     const btnId = `${name}Btn`;
     const fcnName = `logFunctions.${name}`;
-    // console.log(btnId);
-    // console.log(fcnName);
+
     // Create button
     btnSec.innerHTML += `
       <button class="btn" id=${btnId} data-fcn=${fcnName}>${name}</button>
     `;
   });
 
-  buttons = document.querySelectorAll(".btn");
-  
+  buttonNodes = document.querySelectorAll(".btn");
+  buttons = Array.from(buttonNodes);
+
+
   // buttons.forEach(button => button.addEventListener("click", console.log("hi")))
 
   //  buttons.forEach(button => button.addEventListener("click", `logFunctions.${button}`));
 
-  btnListeners(btnNames, buttons);
+
+  // btnListeners(btnNames, buttons);
 };
 
-function btnListeners(btnNames, buttons) {
-  console.log(btnNames);
-  buttons.forEach(btn => {
-    // console.log(btn.dataset.fcn);
-    const named = btn.dataset.fcn;
-    console.log(named);
-    
-    btn.addEventListener("click", `${btn.dataset.fcn}`);
-  })
-};
+// function btnListeners(btnNames, buttons) {
+//   console.log(btnNames);
+//   buttons.forEach(btn => {
+//     // console.log(btn.dataset.fcn);
+//     const named = btn.dataset.fcn;
+//     console.log(named);
+//
+//     btn.addEventListener("click", `${btn.dataset.fcn}`);
+//   })
+// };
 
 // DOM updates
 function makeGreen() {
@@ -72,7 +74,7 @@ const logFunctions = {
   // Interpolated
   // not used as frequently; inserts the second string in place of the %s in the first string
   interpolated() {
-    console.log("Hello, I am an %s interpolation!", "✨"); 
+    console.log("Hello, I am an %s interpolation!", "✨");
   },
 
   // Styled
@@ -156,7 +158,7 @@ const logFunctions = {
     console.count("strawberry 🍓");
     console.count("strawberry 🍓");
   },
-    
+
 
   // Timing
   // logs the message, and the time needed to complete the action
@@ -173,7 +175,7 @@ const logFunctions = {
   // Tables
   // logs data in a table format, rather than arrays / objects
   table() {
-    console.table(dogs); 
+    console.table(dogs);
   }
 };
 
@@ -191,4 +193,3 @@ const logFunctions = {
 //   realConsoleLog.apply(console, arguments);
 // };
 // console.log("hello", "my", "name", "is", "shantharuban");
-

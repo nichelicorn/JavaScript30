@@ -14,3 +14,5 @@ Create a drawing tablet in the window!
 
 #### References
 * [JavaScript30](https://javascript30.com/)
+* [NodeList on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/NodeList#example)
+* [`Array.from()` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
