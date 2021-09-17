@@ -2,18 +2,57 @@
 const output = document.getElementById("output");
 const h1 = document.querySelector("h1");
 const btnSec = document.getElementById("btnSec");
+const displaySec = document.getElementById("displaySec");
+let buttons = [];
+
 
 // 👂 Event listeners
 window.addEventListener("load", buildConsoleView);
 h1.addEventListener("click", makeGreen);
-
-// const codeToVisualize = {};
 
 // Datasets
 const dogs = [
   { name: 'Snickers', age: 2 }, 
   { name: 'Hugo', age: 8 }
 ];
+
+// 🛠 View builder
+function buildConsoleView() {
+  btnSec.innerHTML = "";
+
+  const btnNames = Object.keys(logFunctions);
+  const functions = Object.values(logFunctions);
+
+  btnNames.map(name => {
+    const btnId = `${name}Btn`;
+    const fcnName = `logFunctions.${name}`;
+    // console.log(btnId);
+    // console.log(fcnName);
+    // Create button
+    btnSec.innerHTML += `
+      <button class="btn" id=${btnId} data-fcn=${fcnName}>${name}</button>
+    `;
+  });
+
+  buttons = document.querySelectorAll(".btn");
+  
+  // buttons.forEach(button => button.addEventListener("click", console.log("hi")))
+
+  //  buttons.forEach(button => button.addEventListener("click", `logFunctions.${button}`));
+
+  btnListeners(btnNames, buttons);
+};
+
+function btnListeners(btnNames, buttons) {
+  console.log(btnNames);
+  buttons.forEach(btn => {
+    // console.log(btn.dataset.fcn);
+    const named = btn.dataset.fcn;
+    console.log(named);
+    
+    btn.addEventListener("click", `${btn.dataset.fcn}`);
+  })
+};
 
 // DOM updates
 function makeGreen() {
@@ -143,7 +182,7 @@ const logFunctions = {
 // rethink this - set the output as an element
 // return an innerHTML that displays the code in a div
 
-window.addEventListener("click", logFunctions.domElement);
+// window.addEventListener("click", logFunctions.domElement);
 
 // var realConsoleLog = console.log;
 // console.log = function () {
@@ -153,20 +192,3 @@ window.addEventListener("click", logFunctions.domElement);
 // };
 // console.log("hello", "my", "name", "is", "shantharuban");
 
-// 🛠 View builder
-function buildConsoleView() {
-  btnSec.innerHTML = "";
-
-  const btnNames = Object.keys(logFunctions);
-  // console.log("btnNames <>>>", btnNames);
-  btnNames.map(btn => {
-    console.log("btn <>>>", btn);
-    btnSec.innerHTML+= `
-      <button id=${btn}>${btn}</button>
-    `;
-  });
-
-  btnNames.map(btn => {
-    console.log(`${btn}Btn`);
-  });
-}
