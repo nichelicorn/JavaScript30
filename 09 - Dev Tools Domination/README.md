@@ -1,6 +1,6 @@
-# JavaScript30 no. 8 - Fun with HTML5 Canvas
+# JavaScript30 no. 9 - Dev tools Domination!!
 
-Create a drawing tablet in the window!
+Learn more about the dev tools!
 
 [Dev Tool Dom 🛠](https://codepen.io/nichelicorn/pen/wveyxdK)
 
