@@ -1,9 +1,13 @@
+let codeToVisualize = {}
+;
+
 const dogs = [{ name: 'Snickers', age: 2 }, { name: 'Hugo', age: 8 }];
 
 function makeGreen() {
-  const p = document.querySelector('p');
-  p.style.color = '#BADA55';
-  p.style.fontSize = '50px';
+  const h1 = document.querySelector('h1');
+  h1.style.color = '#BADA55';
+  h1.style.fontSize = '50px';
+  console.log("The header is green now 🐸");
 }
 
 // Regular
@@ -32,8 +36,8 @@ console.info("Geckos lack eyelids, so they lick their eyes to wet them.");
 // displays an info ℹ️ message in the console
 
 // Testing
-const p = document.querySelector("p");
-console.assert(p.classList.contains("ouch"), "There is no ouch!");
+const h1 = document.querySelector("h1");
+console.assert(h1.classList.contains("ouch"), "There is no ouch!");
 
 console.assert(2 === 2, "That is wrong!");
 // displays an error ❗️ message if the conditional fails; does nothing if the assertion is correct
@@ -71,10 +75,29 @@ console.count("radish");
 // timing
 console.time("fetching data");
 fetch("https://api.github.com/users/nichelicorn")
-.then(data => data.json())
-.then(data => {
-console.timeEnd("fetching data");
-console.log(data);
-})
+  .then(data => data.json())
+  .then(data => {
+  console.timeEnd("fetching data");
+  console.log(data);
+});
+// logs the message, and the time needed to complete the action
 
+// Tables
 console.table(dogs); 
+// logs data in a table format, rather than arrays / objects
+
+// 🪟 Console in the Window
+const visualConsole = console.log;
+
+console.log = function() {
+  const message = [].join.call(arguments, " ");
+  $(".output").text(message);
+  visualConsole.apply(console, arguments);
+}
+console.log(dogs);
+
+
+codeToVisualize = {
+  ...dogs,
+  
+};
