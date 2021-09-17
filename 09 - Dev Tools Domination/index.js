@@ -1,13 +1,7 @@
 // 🔎 Query selectors
-const output = document.getElementById("output");
 const h1 = document.querySelector("h1");
-const btnSec = document.getElementById("btnSec");
-const displaySec = document.getElementById("displaySec");
-let buttonNodes = [];
-let buttons = [];
 
 // 👂 Event listeners
-window.addEventListener("load", buildConsoleView);
 h1.addEventListener("click", makeGreen);
 
 // Datasets
@@ -16,45 +10,7 @@ const dogs = [
   { name: 'Hugo', age: 8 }
 ];
 
-// 🛠 View builder
-function buildConsoleView() {
-  btnSec.innerHTML = "";
-
-  const btnNames = Object.keys(logFunctions);
-  const functions = Object.values(logFunctions);
-
-  btnNames.map(name => {
-    const btnId = `${name}Btn`;
-    const fcnName = `logFunctions.${name}`;
-
-    // Create button
-    btnSec.innerHTML += `
-      <button class="btn" id=${btnId} data-fcn=${fcnName}>${name}</button>
-    `;
-  });
-
-  buttonNodes = document.querySelectorAll(".btn");
-  buttons = Array.from(buttonNodes);
-
-
-  // buttons.forEach(button => button.addEventListener("click", console.log("hi")))
-
-  //  buttons.forEach(button => button.addEventListener("click", `logFunctions.${button}`));
-
-
-  // btnListeners(btnNames, buttons);
-};
-
-// function btnListeners(btnNames, buttons) {
-//   console.log(btnNames);
-//   buttons.forEach(btn => {
-//     // console.log(btn.dataset.fcn);
-//     const named = btn.dataset.fcn;
-//     console.log(named);
-//
-//     btn.addEventListener("click", `${btn.dataset.fcn}`);
-//   })
-// };
+let functionTable = [];
 
 // DOM updates
 function makeGreen() {
@@ -63,6 +19,9 @@ function makeGreen() {
   // h1.style.fontSize = '50px';
   console.log("The header is green now 🐸");
 }
+
+// Console tools
+
 
 const logFunctions = {
   // Regular
@@ -179,17 +138,13 @@ const logFunctions = {
   }
 };
 
-// 🪟 Console in the Window
+function displayFcnLog() {
+  // functionTable = Object.keys(logFunctions);
+  const names = Object.keys(logFunctions);
+  functionTable = names.map(name => `logFunctions.${name}()`);
+  console.table(functionTable);
+}
 
-// rethink this - set the output as an element
-// return an innerHTML that displays the code in a div
-
-// window.addEventListener("click", logFunctions.domElement);
-
-// var realConsoleLog = console.log;
-// console.log = function () {
-//   var message = [].join.call(arguments, " ");
-//   $(".output").text(message);
-//   realConsoleLog.apply(console, arguments);
-// };
-// console.log("hello", "my", "name", "is", "shantharuban");
+console.log("To view some console methods in action, try out these commands in the terminal! 👇 (Listed under the 'Values' column.)");
+// console.log(`logFunctions.${Object.keys(logFunctions)}`);
+displayFcnLog();
