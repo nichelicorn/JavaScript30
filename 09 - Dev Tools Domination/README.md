@@ -2,7 +2,7 @@
 
 Learn more about the dev tools!
 
-[Dev Tool Dom 🛠](https://codepen.io/nichelicorn/pen/wveyxdK)
+[Dev Tool Dom 🛠](https://replit.com/@nichelicorn/DevToolDomination#index.js)
 
 #### Goals
 * Learn more about the dev tools in the browser
