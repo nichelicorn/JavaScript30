@@ -2,7 +2,7 @@
 
 More practice with array methods!
 
-[There is code to visit on CodePen!](https://codepen.io/nichelicorn/pen/RwgjJqz)
+[Play with arrays in the sandbox!](https://replit.com/@nichelicorn/JavaScript30ArrayCardio2#index.js)
 
 #### Goals
 * Practice a few new array methods

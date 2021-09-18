@@ -2,7 +2,7 @@
 
 Practice with JavaScript array methods - the "gateway drug to functional programming"
 
-[Check out the results on CodePen!](https://codepen.io/nichelicorn/pen/NWgjENe)
+[Fun with array methods](https://replit.com/@nichelicorn/JavaScript30ArrayCardio1#index.js)
 
 #### Goals
 * Practice using array methods
