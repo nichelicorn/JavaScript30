@@ -141,6 +141,8 @@
   };
 
   function checkBoxes(e) {
+    const child1Num = child1.slice(-1);
+    const child2Num = child2.slice(-1);
     if (child1 && child2) {
       console.log(`child1 is ${child1}, child2 is ${child2}`);
     } else {
@@ -155,11 +157,12 @@
     // mark that element as "checked"
     // does the NodeList need to become an array?
     boxes.forEach(box => {
-      if (box.checked) {
-        console.log(box);
-        console.log(`pickle on ${box.id}`);
+      const boxNum = box.id.slice(-1);
+      if (boxNum >= child1Num && boxNum <= child2Num) {
+        box.checked = true;
+        console.log("hello pickle");
       }
-    })
+    });
 
   }
 
