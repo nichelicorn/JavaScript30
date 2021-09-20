@@ -133,29 +133,29 @@
   // }
 
   function selectBoxes(e) {
+    // console.log("event <>>>", e);
     if (e.keyCode === 16) {
       console.log("this is the key you are looking for");
+
+      if (child1 && child2) {
+        console.log(`child1 is ${child1}, child2 is ${child2}`);
+      } else {
+        console.log("nothing is selected");
+      };
+
+      boxes.forEach(box => {
+        if (box.id )
+        console.log("box <>>>", box);
+      })
     }
-    // console.log("event <>>>", e);
-    if (child1) {
-      console.log(`child1 is ${child1}, child2 is ${child2}`);
-    } else if (child1 && child2) {
-      console.log(`child1 is ${child1}, child2 is ${child2}`);
-    } else {
-      console.log("nothing is selected");
-    }
-
-
-
     // select all boxes in between
       //
     // need to use child selectors
 
-    // need a global variable for each box, set to undefined
-    // for each box, if checked, invoke indentifyBox()
-    // does each box need an individual id? - yes, they currently have only a type
-    // assign that box to a variable, starting w/ child1
-
+    // how to identify inputs in NodeList `boxes` that need to be checked?
+    // for each box, if the id number lies between child1 and child2
+    // mark that element as "checked"
+    // does the NodeList need to become an array?
 
 
   };
