@@ -58,44 +58,112 @@
   -->
   <div class="inbox">
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box1">
       <p>This is an inbox layout.</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box2">
       <p>Check one item</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box3">
       <p>Hold down your Shift key</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box4">
       <p>Check a lower item</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box5">
       <p>Everything in between should also be set to checked</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box6">
       <p>Try to do it without any libraries</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box7">
       <p>Just regular JavaScript</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box8">
       <p>Good Luck!</p>
     </div>
     <div class="item">
-      <input type="checkbox">
+      <input type="checkbox" id="box9">
       <p>Don't forget to tweet your result!</p>
     </div>
   </div>
 
 <script>
+  // challenge: allow multiple checkboxes to be selected
+    // user clicks one box, presses and hold shift key, checks another box
+    // all checkboxes inbetween the checked boxes should now be selected
+  // how can this be accomplished?
+    // what needs to happen on the page?
+    // check boxes should be selectable so an action can be performed upon them
+    // will need to listen for a click event on box1
+    // will need to listen for shift key being pressed / held down
+    // will need to listen for a click event on box2
+  // what could this function look like?
+    // 😊 happy path
+    // step 1 - box is checked by user
+    // step 2 - shift key is pressed / held by user
+      // can an event listener be inside a function?
+    // step 3 - box is checked by user
+    // RESULT - all boxes between checked boxes are checked
+
+  // 🌐 Global variables
+  let child1 = undefined;
+  let child2 = undefined;
+
+  // 🔎 Query selectors
+  const boxes = document.querySelectorAll("input");
+
+  // 👂 Event listeners
+  // need an event listener for the shift key being pressed - should this be on the document?
+  document.addEventListener("click", identifyBox);
+  document.addEventListener("keydown", checkAllBoxes);
+
+  // ⚙️ Functions
+  // if (a box is checked && shift key is pressed) {
+    // listen for another box check
+    // check all boxes leading up to the second checked box
+  // }
+
+  function checkAllBoxes(e) {
+    if (e.keyCode === 16) {
+      console.log("this is the key you are looking for");
+    }
+    // console.log("event <>>>", e);
+    // find the first checked box
+      // if a box is checked, assign that box to child1
+    // find the second checked box
+      // assign box to child2
+    // select all boxes in between
+      //
+    // need to use child selectors
+
+    // need a global variable for each box, set to undefined
+    // for each box, if checked, invoke indentifyBox()
+    // does each box need an individual id? - yes, they currently have only a type
+    // assign that box to a variable, starting w/ child1
+
+
+
+  };
+
+  function identifyBox(e) {
+    console.log("event.target <>>>", event.target);
+    console.log("event target checked? <>>>", event.target.checked)
+    if (event.target.type === "checkbox" && event.target.checked && child1 === undefined) {
+      child1 = event.target.id;
+      console.log(`You have clicked checkbox ${child1}`);
+    }
+  };
+
+
+
 </script>
 </body>
 </html>
