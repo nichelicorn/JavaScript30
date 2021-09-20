@@ -128,13 +128,7 @@
   window.addEventListener("load", boxes.forEach(box => box.checked = false));
 
   // ⚙️ Functions
-  // if (a box is checked && shift key is pressed) {
-    // listen for another box check
-    // check all boxes leading up to the second checked box
-  // }
-
   function verifyKey(e) {
-    // console.log("event <>>>", e);
     if (e.keyCode === 16) {
       console.log("this is the key you are looking for");
       checkBoxes();
@@ -149,14 +143,7 @@
     } else {
       console.log("nothing is selected");
     };
-    // select all boxes in between
-    //
-    // need to use child selectors
 
-    // how to identify inputs in NodeList `boxes` that need to be checked?
-    // for each box, if the id number lies between child1 and child2
-    // mark that element as "checked"
-    // does the NodeList need to become an array?
     boxes.forEach(box => {
       const boxNum = box.id.slice(-1);
       if (boxNum >= child1Num && boxNum <= child2Num) {
@@ -167,23 +154,15 @@
         console.log("hello pickle");
       }
     });
-
   }
 
   function assignBoxes(e) {
-    // console.log("event.target <>>>", event.target);
-    // console.log("event target checked? <>>>", event.target.checked)
     if (event.target.type === "checkbox" && event.target.checked && child1 === undefined) {
       child1 = event.target.id;
-      // console.log(`You have clicked check${child1}`);
     } else if (event.target.type === "checkbox" && event.target.checked && child2 === undefined) {
       child2 = event.target.id;
-      // console.log(`You have clicked check${child2}`);
     }
   };
-
-
-
 </script>
 </body>
 </html>

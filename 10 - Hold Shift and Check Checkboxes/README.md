@@ -5,12 +5,13 @@ Fun with checkboxes ✅
 <!-- [Dev Tool Dom 🛠](https://replit.com/@nichelicorn/DevToolDomination#index.js) -->
 
 #### Goals
-* Create code to allow multiple checkboxes to be selected by using the shift key (check a box, press and hold the shift key, check another box)
-  * Should work top to bottom, and bottom to top
-  * Try it solo before watching the video
+* ✅ Create code to allow multiple checkboxes to be selected by using the shift key (check a box, press and hold the shift key, check another box)
+  * ✅ Should work top to bottom, and bottom to top
+  * ✅ Try it solo before watching the video
 
 #### What did I learn?
-*
+* Pseudocode is invaluable when attempting to problem-solve something new
+* MDN is my best friend
 
 #### References
 * [JavaScript30](https://javascript30.com/)
