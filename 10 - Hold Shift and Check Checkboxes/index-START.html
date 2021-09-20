@@ -123,7 +123,8 @@
   // 👂 Event listeners
   // need an event listener for the shift key being pressed - should this be on the document?
   document.addEventListener("click", identifyBox);
-  document.addEventListener("keydown", checkAllBoxes);
+  document.addEventListener("keyup", selectBoxes);
+  window.addEventListener("load", console.clear());
 
   // ⚙️ Functions
   // if (a box is checked && shift key is pressed) {
@@ -131,15 +132,21 @@
     // check all boxes leading up to the second checked box
   // }
 
-  function checkAllBoxes(e) {
+  function selectBoxes(e) {
     if (e.keyCode === 16) {
       console.log("this is the key you are looking for");
     }
     // console.log("event <>>>", e);
-    // find the first checked box
-      // if a box is checked, assign that box to child1
-    // find the second checked box
-      // assign box to child2
+    if (child1) {
+      console.log(`child1 is ${child1}, child2 is ${child2}`);
+    } else if (child1 && child2) {
+      console.log(`child1 is ${child1}, child2 is ${child2}`);
+    } else {
+      console.log("nothing is selected");
+    }
+
+
+
     // select all boxes in between
       //
     // need to use child selectors
@@ -154,11 +161,14 @@
   };
 
   function identifyBox(e) {
-    console.log("event.target <>>>", event.target);
-    console.log("event target checked? <>>>", event.target.checked)
+    // console.log("event.target <>>>", event.target);
+    // console.log("event target checked? <>>>", event.target.checked)
     if (event.target.type === "checkbox" && event.target.checked && child1 === undefined) {
       child1 = event.target.id;
-      console.log(`You have clicked checkbox ${child1}`);
+      // console.log(`You have clicked check${child1}`);
+    } else if (event.target.type === "checkbox" && event.target.checked && child2 === undefined) {
+      child2 = event.target.id;
+      // console.log(`You have clicked check${child2}`);
     }
   };
 
