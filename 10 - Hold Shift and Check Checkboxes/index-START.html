@@ -130,7 +130,7 @@
   // ⚙️ Functions
   function verifyKey(e) {
     if (e.keyCode === 16) {
-      console.log("this is the key you are looking for");
+      // console.log("this is the key you are looking for");
       checkBoxes();
     }
   };
@@ -139,21 +139,25 @@
     const child1Num = child1.slice(-1);
     const child2Num = child2.slice(-1);
     if (child1 && child2) {
-      console.log(`child1 is ${child1}, child2 is ${child2}`);
+      // console.log(`child1 is ${child1}, child2 is ${child2}`);
     } else {
       console.log("nothing is selected");
     };
 
     boxes.forEach(box => {
       const boxNum = box.id.slice(-1);
-      if (boxNum >= child1Num && boxNum <= child2Num) {
-        box.checked = true;
-        console.log("hello pickle");
-      } else if ( boxNum <= child1Num && boxNum >= child2Num) {
-        box.checked = true;
-        console.log("hello pickle");
+      if (boxNum > child1Num && boxNum < child2Num) {
+      // if (boxNum >= child1Num && boxNum <= child2Num) {
+        // box.checked = true;
+        box.checked = !box.checked; // causes only the in-between boxes to be checked
+        // console.log("hello pickle");
+      } else if ( boxNum < child1Num && boxNum > child2Num) {
+      // } else if ( boxNum <= child1Num && boxNum >= child2Num) {
+        // box.checked = true;
+        box.checked = !box.checked;
+        // console.log("hello pickle");
       }
-    });
+    }); // this solution works as long as there is a like box to be checked on the other "end" of the chain - if user attempt to select a checked box, and an unchecked box, throws an error : `Uncaught TypeError: can't access property "slice", child2 is undefined`
 
     [child1, child2] = [undefined, undefined];
   }
@@ -161,8 +165,10 @@
   function assignBoxes(e) {
     if (event.target.type === "checkbox" && event.target.checked && child1 === undefined) {
       child1 = event.target.id;
+      console.log("child1 <>>> ", child1);
     } else if (event.target.type === "checkbox" && event.target.checked && child2 === undefined) {
       child2 = event.target.id;
+      console.log("child2 <>>> ", child2);
     }
   };
 </script>
