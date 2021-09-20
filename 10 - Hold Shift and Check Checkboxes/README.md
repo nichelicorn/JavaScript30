@@ -16,3 +16,4 @@ Fun with checkboxes ✅
 * [JavaScript30](https://javascript30.com/)
 * [Keydown event on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event)
 * [`<input type="checkbox">` on MDN :](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+* [`String.prototype.slice()` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice)

@@ -125,6 +125,7 @@
   document.addEventListener("click", assignBoxes);
   document.addEventListener("keyup", verifyKey);
   window.addEventListener("load", console.clear());
+  window.addEventListener("load", boxes.forEach(box => box.checked = false));
 
   // ⚙️ Functions
   // if (a box is checked && shift key is pressed) {
