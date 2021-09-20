@@ -17,7 +17,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 7 : [Array Workout 2](https://replit.com/@nichelicorn/JavaScript30ArrayCardio2#index.js)
 * Day 8 : [Fun with HTML5 Canvas](https://codepen.io/nichelicorn/pen/rNwpZMg)
 * Day 9 : [Dev Tools Domination 💣](https://replit.com/@nichelicorn/DevToolDomination#index.js)
-<!-- * Day 10 : []() -->
+* Day 10 : [Fun with Checkboxes ✅](https://codepen.io/nichelicorn/pen/bGRMxjW)
 <!-- * Day 11 : []() -->
 <!-- * Day 12 : []() -->
 <!-- * Day 13 : []() -->
