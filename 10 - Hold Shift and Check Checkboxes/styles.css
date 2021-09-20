@@ -1,11 +1,11 @@
 html {
-  font-family: sans-serif;
+  font-family:'helvetica neue';
   background-image: url("https://images.pexels.com/photos/211358/pexels-photo-211358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
 }
 
 .inbox {
-  max-width: 400px;
+  max-width: 40vw;
   margin: 50px auto;
   background: white;
   border-radius: 5px;
@@ -36,27 +36,18 @@ p {
   padding: 20px;
   transition: background 0.2s;
   flex: 1;
-  font-family:'helvetica neue';
   font-size: 20px;
   font-weight: 200;
-  border-left: 1px solid #D1E2FF;
 }
 
-
-header,
 footer {
+  background-color: hsla(360, 100%, 100%, 0.5);
   font-family: 'Courier New', Courier, monospace;
-  color: white;
+  color: black;
   text-justify:auto;
   text-align: center;
-  /* position: absolute; */
-  /* bottom: 0; */
   margin: .5rem;
   padding: .5rem;
-}
-
-header {
-  /* top: 0; */
 }
 
 .footWords {
@@ -81,6 +72,11 @@ a:hover {
   padding: 0 .5rem 0 .5rem;
 }
 
-a:visited {
-  color: white;
+p > a,
+p > a:visited {
+  color: black;
+}
+
+sub > a {
+  color: black;
 }

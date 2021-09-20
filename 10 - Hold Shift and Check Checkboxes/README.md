@@ -2,7 +2,7 @@
 
 Fun with checkboxes ✅
 
-<!-- [Dev Tool Dom 🛠](https://replit.com/@nichelicorn/DevToolDomination#index.js) -->
+[Dev Tool Dom 🛠](https://codepen.io/nichelicorn/pen/bGRMxjW)
 
 #### Goals
 * ✅ Create code to allow multiple checkboxes to be selected by using the shift key (check a box, press and hold the shift key, check another box)
@@ -12,6 +12,7 @@ Fun with checkboxes ✅
 #### What did I learn?
 * Pseudocode is invaluable when attempting to problem-solve something new
 * MDN is my best friend
+* Wes came up with a *really* different solution to mine
 
 #### References
 * [JavaScript30](https://javascript30.com/)
