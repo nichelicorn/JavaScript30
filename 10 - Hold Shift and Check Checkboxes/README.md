@@ -2,7 +2,7 @@
 
 Fun with checkboxes ✅
 
-[Dev Tool Dom 🛠](https://codepen.io/nichelicorn/pen/bGRMxjW)
+[Check out the checkboxes!](https://codepen.io/nichelicorn/pen/bGRMxjW)
 
 #### Goals
 * ✅ Create code to allow multiple checkboxes to be selected by using the shift key (check a box, press and hold the shift key, check another box)
