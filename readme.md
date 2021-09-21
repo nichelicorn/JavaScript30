@@ -18,7 +18,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 8 : [Fun with HTML5 Canvas 🖌](https://codepen.io/nichelicorn/pen/rNwpZMg)
 * Day 9 : [Dev Tools Domination 💣](https://replit.com/@nichelicorn/DevToolDomination#index.js)
 * Day 10 : [Fun with Checkboxes ✅](https://codepen.io/nichelicorn/pen/bGRMxjW)
-* Day 11 : [Custom Video Player with HTML5 📺]()
+* Day 11 : [Custom Video Player with HTML5 📺](https://codepen.io/nichelicorn/pen/RwgJMjJ)
 <!-- * Day 12 : []() -->
 <!-- * Day 13 : []() -->
 <!-- * Day 14 : []() -->

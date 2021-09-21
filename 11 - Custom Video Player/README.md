@@ -1,8 +1,8 @@
 # JavaScript30 no. 11 - Custom HTML5 Video Player
 
-Watch some movies!
+Watch some movies! (well...in theory. If you *really* want to see the video, download the code [here : ](https://github.com/nichelicorn/JavaScript30/tree/master/11%20-%20Custom%20Video%20Player))
 
-[Video time!](https://codepen.io/nichelicorn/pen/bGRMxjW)
+[Video time!](https://codepen.io/nichelicorn/pen/RwgJMjJ)
 
 #### Goals
 * Learn about HTML `<video>` element
@@ -12,7 +12,6 @@ Watch some movies!
 
 #### What did I learn?
 * The HTML `<video>` element has built-in methods and attributes, much like a JavaScript prototype object
-
 
 #### References
 * [JavaScript30](https://javascript30.com/)
