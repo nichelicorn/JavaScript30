@@ -18,7 +18,7 @@ function togglePlay() {
   // } else {
   //   video.pause();
   // }
-  // re-written as a ternary, set to a variable
+  // re-written as a ternary, set to a variable - sets the value as the method depending upon the current state of video play
   const method = video.paused ? "play" : "pause";
   video[method]();
 
@@ -70,7 +70,10 @@ function toggleScreen() {
   // ✅ set an event listener on the button
   // ✅ find full screen size (height * width)
   // need to create transition to update video player element
-  
+
+  // this switches the video to fullscreen mode, but the player inputs disappear - must `esc` fullscreen to view controls again
+  playerVideo.requestFullscreen();
+
 
   // 👇 these aren't doing anything;
   // playerVideo.style.height = fullHeight;
