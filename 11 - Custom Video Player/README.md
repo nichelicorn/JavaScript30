@@ -16,5 +16,6 @@ Watch some movies!
 
 #### References
 * [JavaScript30](https://javascript30.com/)
+* [`<video>` : The Video Embed elemenent on MDN : ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 * [`Element.requestFullscreen()` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen)
 * [Guide to the Fullscreen API on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide)
