@@ -13,6 +13,8 @@ Watch some movies!
 #### What did I learn?
 * The HTML `<video>` element has built-in methods and attributes, much like a JavaScript prototype object
 
+
 #### References
 * [JavaScript30](https://javascript30.com/)
-* 
+* [`Element.requestFullscreen()` on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen)
+* [Guide to the Fullscreen API on MDN : ](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide)
