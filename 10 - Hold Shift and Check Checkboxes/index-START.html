@@ -57,6 +57,46 @@
       </div>
       <sub>Image by <a href="https://www.pexels.com/photo/brown-pumpkin-halloween-decor-and-gray-skull-at-grass-field-211358/">freestocks.org from Pexels</a></sub>
     </footer>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js">// the way I solved it</script>
+    <!-- <script>
+      // the way Wes solves it
+      const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+      let lastChecked = undefined;
+
+      checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck));
+
+      function handleCheck(e) {
+        console.log(e);
+        // see if they had the shift key down
+        // AND see if another box is being checked
+        let inBetween = false; // a flag variable, kind of like a placeholder
+        // loop over each box to see if it is checked
+        // it will find the first checked box and check boxes until it finds the last box checked (variable `lastChecked`);
+        if (e.shiftKey && this.checked) {
+          // loop through all checkboxes and see if it is checked - if it is the first one it will check it until it has reached the last checked box
+          // iterate through the checkboxes
+          checkboxes.forEach(box => {
+            console.log(box);
+            if (box === this || box === lastChecked) {
+              inBetween = !inBetween;
+              console.log("starting to check in between")
+            };
+
+            if (inBetween) {
+              box.checked = true;
+            };
+
+          })
+        }
+
+
+        lastChecked = this;
+      }
+
+      // need to add the first check to a variable ✅
+
+
+    </script> -->
   </body>
 </html>
