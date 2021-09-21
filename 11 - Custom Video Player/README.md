@@ -8,7 +8,7 @@ Watch some movies!
 * Learn about HTML `<video>` element
 * Build custom video interface!
   * Add functionality to video player buttons / sliders / timing elements
-* Make the full-screen button work
+* Add a functional full-screen button
 
 #### What did I learn?
 * The HTML `<video>` element has built-in methods and attributes, much like a JavaScript prototype object

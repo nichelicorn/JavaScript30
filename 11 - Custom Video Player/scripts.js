@@ -1,4 +1,5 @@
 // 🔎 Query selectors
+const playerVideo = document.querySelector(".player__video");
 const player = document.querySelector(".player");
 const video = player.querySelector(".viewer"); // find the video inside the player
 const progress = player.querySelector(".progress");
@@ -6,6 +7,7 @@ const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]"); // will grab anything that has a `data-skip` attribute
 const ranges = player.querySelectorAll(".player__slider");
+const fsBtn = document.getElementById("fsBtn");
 
 
 // ⚙️ Functions
@@ -54,6 +56,30 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+function toggleScreen() {
+  const fullHeight = window.screen.height;
+  const fullWidth = window.screen.width;
+  
+  console.log(`full screen mode, you would like? ${fullHeight} x ${fullWidth}?`);
+
+  // set viewer height & width to window dimensions;
+  // should this be set as a style?
+
+  // when the TV button is clicked,
+  // screen will transition to full-size video
+  // ✅ set an event listener on the button
+  // ✅ find full screen size (height * width)
+  // need to create transition to update video player element
+  
+
+  // 👇 these aren't doing anything;
+  // playerVideo.style.height = fullHeight;
+  // playerVideo.style.width = fullWidth;
+  // [video.height, video.width = fullHeight, fullWidth];
+  // video.height = fullHeight;
+  // video.width = fullWidth;
+}
+
 // 👂 Event listeners
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
@@ -74,3 +100,5 @@ progress.addEventListener("click", scrub);
 progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
 progress.addEventListener("mousedown", () => mousedown = true);
 progress.addEventListener("mouseup", () => mousedown = false);
+
+fsBtn.addEventListener("click", toggleScreen);
