@@ -1,4 +1,4 @@
-https://courses.wesbos.com/account/access/60e70793b36fe451adb847c0/view/194129583html {
+html {
   box-sizing: border-box;
 }
 
@@ -7,23 +7,24 @@ https://courses.wesbos.com/account/access/60e70793b36fe451adb847c0/view/19412958
 }
 
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
-  background: #7A419B;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
-  background-size: cover;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
 }
 
 .player {
-  max-width: 750px;
   border: 5px solid rgba(0,0,0,0.2);
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  position: relative;
   font-size: 0;
+  margin: 0 0 3rem 0;
+  max-width: 750px;
+  position: relative;
   overflow: hidden;
 }
 
@@ -55,7 +56,7 @@ body {
 }
 
 .player__button:focus {
-  border-color: #ffc600;
+  background: rgb(124, 21, 153);
 }
 
 .player__slider {
@@ -98,10 +99,10 @@ body {
 }
 
 .progress__filled {
-  width: 50%;
-  background: #ffc600;
+  width: 0;
+  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
   flex: 0;
-  flex-basis: 50%;
+  flex-basis: 0;
 }
 
 /* unholy css to style input type="range" */
@@ -131,7 +132,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: rgb(124, 21, 153);
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -3.5px;
@@ -157,6 +158,49 @@ input[type=range]::-moz-range-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: rgb(124, 21, 153);
   cursor: pointer;
+}
+
+footer {
+  background-color: hsla(360, 100%, 100%, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  text-justify:auto;
+  text-align: center;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.footWords {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footWords > p {
+  padding: 0 1rem 0 1rem;
+}
+
+a {
+color: deeppink;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: hsla(328, 100%, 54%, .5);
+  border-radius: 3rem;
+  padding: 0 .5rem 0 .5rem;
+}
+
+p > a,
+p > a:visited {
+  color: black;
+}
+
+sub > a {
+  color: black;
 }
