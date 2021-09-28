@@ -6,7 +6,8 @@ const clues = document.querySelectorAll(".clue");
 
 // 👂 Event listeners
 window.addEventListener("keyup", unicornifyPage);
-window.addEventListener("keydown", tabOverClues);
+// window.addEventListener("keydown", tabOverClues);
+clues.forEach(clue => clue.addEventListener("keydown", tabOverClues));
 
 // ⚙️ Functions
 function unicornifyPage(e) {
@@ -24,4 +25,11 @@ function unicornifyPage(e) {
 
 function tabOverClues(e) {
   console.log(e.key);
+  console.log(e);
+  if (e.target) {
+    console.log("hello target?", e.target);
+    e.target.classList.add("unhide");
+  } else {
+    e.target.classList.remove("unhide");
+  }
 }
