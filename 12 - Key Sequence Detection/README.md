@@ -2,7 +2,7 @@
 
 [Crack the code!](https://codepen.io/nichelicorn/pen/abwXzjv)
 
-#### Goals
+#### Goals 🦄
 * When a user inputs a certain sequence of keys, an action will be performed
 * Inspired by Konami's up+up+down+down...
 
