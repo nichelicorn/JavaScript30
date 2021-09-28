@@ -1,0 +1,32 @@
+body {
+  font-family: Futura, sans-serif;
+}
+
+.hdrs {
+  text-align: center;
+}
+
+.clues {
+  padding: 3rem;
+}
+
+.clue:hover {
+  background-color:darkseagreen;
+  filter: brightness(100%);
+  /* visibility: visible; */
+}
+
+.clue {
+  /* visibility: hidden; */
+  background-color: black;
+  filter: brightness(0%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  margin: .5rem;
+  width: 100%;
+}
+
+.unhide {
+  background-color: darkseagreen;
+  filter: brightness(100%);
+}
