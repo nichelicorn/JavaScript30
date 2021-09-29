@@ -1,6 +1,6 @@
 # JavaScript30 no. 13 - Slide in on Scroll
 
-[Get sliding!]()
+[Get sliding!](https://codepen.io/nichelicorn/pen/BaZMgXQ)
 
 #### Goals
 * Transition image into the window on scroll when the image is just "peeking" out of the bottom of the window
@@ -12,7 +12,6 @@
   * In this example, the debounce allows an image event to occur based on scrolling, but *prevents* the function from being invoked continuously on the scroll
   * The term 'debouncer' originates in electronics. Pushing a physical button, like on your TV remote, produces more than one signal, but the TV responds as though the click occurred only once.
   * Debouncers are special functions that handle two tasks : allocating a scope for a `timer` variable; scheduing the timing of function invocation
-  
 
 #### References
 * [JavaScript30](https://javascript30.com/)
