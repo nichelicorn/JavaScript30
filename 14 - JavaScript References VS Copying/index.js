@@ -45,7 +45,6 @@ const team2 = players.slice();
 console.log("team2 <>>>", team2);
 team2[3] = "Lux";
 console.log("team2 updated <>>>", team2);
-console.log("players <>>>", players);
 // now there is an array to manipulate while mainintaing state on the original array
 // updates on team2 will not affect players
 
@@ -57,13 +56,14 @@ console.log("team3 uses `concat` <>>>", team3);
 // or use the new ES6 Spread
 const team4 = [...players];
 team4[3] = "Nail Face Guy... what's his name?"
-console.log("team4 uses the spread op.<>>>", team4);
+console.log("team4 uses the spread syntax<>>>", team4);
 
 const team5 = Array.from(players);
 team5[3] = "Pinhead";
 console.log("team5 uses Array.from() <>>>", team5);
 
 // now when we update it, the original one isn't changed
+console.log("players after updates <>>>", players);
 
 // The same thing goes for objects, let's say we have a person object
 
