@@ -10,6 +10,12 @@ let name2 = name1;
 console.log(name1, name2);
 name1 = "Grogu";
 console.log(name1, name2);
+// reassigning the value of a number or string data type does not affect variables which were originally declared using the altered variable as its value (does that even make sense?)
+// if a new variable (pickle) is declared using another variable as its value (cucumber), updating the new variable does not alter the original variable
+let cucumber = "fresh";
+let pickled = cucumber;
+pickled = "brined";
+console.log(`We started out ${cucumber} and now we're ${pickled}`);
 
 // Let's say we have an array
 const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];

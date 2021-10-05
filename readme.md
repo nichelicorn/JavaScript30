@@ -21,7 +21,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 11 : [Custom Video Player with HTML5 📺](https://codepen.io/nichelicorn/pen/RwgJMjJ)
 * Day 12 : [Crack the code 🔐](https://codepen.io/nichelicorn/pen/abwXzjv)
 * Day 13 : [Sliding Images 🎚](https://codepen.io/nichelicorn/pen/BaZMgXQ)
-<!-- * Day 14 : []() -->
+* Day 14 : [JavaScript - Copy or Reference? 🤔](https://replit.com/@nichelicorn/CopyingObjects#index.js)
 <!-- * Day 15 : []() -->
 <!-- * Day 16 : []() -->
 <!-- * Day 17 : []() -->
