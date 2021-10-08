@@ -1,13 +1,17 @@
 html {
-  box-sizing: border-box;
   background: url("https://images.pexels.com/photos/1382393/pexels-photo-1382393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center no-repeat;
   background-size: cover;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: Futura, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
 }
 
 *,
@@ -16,10 +20,14 @@ html {
   box-sizing: inherit;
 }
 
-h1 {
+h1, h2 {
   /* color: white; */
-  text-transform: uppercase;
-  /* background-color: rgba(0, 0, 0, 0.44); */
+  /* text-transform: uppercase; */
+}
+
+h1 {
+  font-size: 3rem;
+  background-color: rgba(134, 71, 127, 0.62);
 }
 
 .wrapper {
@@ -64,7 +72,7 @@ h2 {
 }
 
 .items-list input:checked + label:before {
-  content: "🌮";
+  content: "🪴";
 }
 
 .add-items {
@@ -78,13 +86,17 @@ h2 {
 }
 
 footer {
-  background-color: hsla(360, 100%, 100%, 0.5);
+  background-color: rgba(134, 71, 127, 0.62);
+  bottom: 0;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  color:ghostwhite;
   font-family: 'Courier New', Courier, monospace;
-  color: black;
+  font-weight: bold;
+  margin: .5rem;
+  position: absolute;
+  padding: .5rem;
   text-justify:auto;
   text-align: center;
-  margin: .5rem;
-  padding: .5rem;
 }
 
 .footWords {
@@ -104,16 +116,16 @@ a {
 }
 
 a:hover {
-  background-color: hsla(328, 100%, 54%, .5);
+  background-color: seagreen;
   border-radius: 3rem;
   /* padding: 0 .5rem 0 .5rem; */
 }
 
 p > a,
 p > a:visited {
-  color: black;
+  color: inherit;
 }
 
 sub > a {
-  color: black;
+  color: inherit;
 }
