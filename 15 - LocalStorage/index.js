@@ -2,6 +2,8 @@
 const addItems = document.querySelector(".add-items");
 const itemsList = document.getElementById("itemsList");
 const items = JSON.parse(localStorage.getItem("items")) || []; // sets value as localStorage, if available, or an empty array if there is no localStorage
+const selectAll = document.getElementById("selectAll");
+const clearList = document.getElementById("clearList");
 
 // ⚙️ Functions
 function addItem(e) {
@@ -38,14 +40,18 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
-// 👂 Event listeners
-addItems.addEventListener("submit", addItem); // want to listen for a submit event on a form - a click event doesn't necessarily pick up all needed info (?)
+function toggleSelect(e) {
+  console.log(e);
+  // look at the items
+  // if the item is not selected, select it
+  items.map(item => item.done = true); 
+  populateList(items, itemsList);
+}
 
-// this list doesn't exist yet when this code is running
-// works the first time, but because the list is refreshed with each submission the DOM updates and these tags disappear
-populateList(items, itemsList);
-// const checkBoxes = document.querySelectorAll("input");
-// checkBoxes.forEach(input => input.addEventListener("click", () => alert("hi")));
-// listen for a click on the parent element (plates) to target a child element that doesn't yet exist on the page
-itemsList.addEventListener("click", toggleDone);
+// 👂 Event listeners
+window.addEventListener("load", populateList(items, itemsList));
+addItems.addEventListener("submit", addItem); // want to listen for a submit event on a form - a click event doesn't necessarily pick up all needed info (?)
+itemsList.addEventListener("click", toggleDone); // listen for a click on the parent element to target a child element that doesn't yet exist on the page
+selectAll.addEventListener("click", toggleSelect);
+
 
