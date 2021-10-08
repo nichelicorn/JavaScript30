@@ -41,10 +41,19 @@ function toggleDone(e) {
 }
 
 function toggleSelect(e) {
-  console.log(e);
   // look at the items
   // if the item is not selected, select it
-  items.map(item => item.done = true); 
+  if (selectAll.innerText === "Select all") {
+    items.map(item => item.done = true);
+    selectAll.innerText = "Deselect all";
+  } else {
+    items.map(item => item.done = false);
+    selectAll.innerText = "Select all";
+  }
+  // if (selectAll.innerText === "Deselect all") {
+  //   items.map(item => item.done = false);
+  //   selectAll.innerText = "Select all";
+  // }
   populateList(items, itemsList);
 }
 
