@@ -22,7 +22,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 12 : [Crack the code 🔐](https://codepen.io/nichelicorn/pen/abwXzjv)
 * Day 13 : [Sliding Images 🎚](https://codepen.io/nichelicorn/pen/BaZMgXQ)
 * Day 14 : [JavaScript - Copy or Reference? 🤔](https://replit.com/@nichelicorn/CopyingObjects#index.js)
-<!-- * Day 15 : []() -->
+* Day 15 : [Nearby Memory 🧠](https://codepen.io/nichelicorn/pen/NWvKJoB)
 <!-- * Day 16 : []() -->
 <!-- * Day 17 : []() -->
 <!-- * Day 18 : []() -->
