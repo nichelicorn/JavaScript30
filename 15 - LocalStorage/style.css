@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url("oh-la-la.jpeg") center no-repeat;
+  background: url("https://images.pexels.com/photos/1382393/pexels-photo-1382393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -16,18 +16,15 @@ html {
   box-sizing: inherit;
 }
 
-svg {
-  fill: white;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 50%;
-  width: 200px;
-  margin-bottom: 50px;
+h1 {
+  /* color: white; */
+  text-transform: uppercase;
+  /* background-color: rgba(0, 0, 0, 0.44); */
 }
 
 .wrapper {
-  padding: 20px;
-  max-width: 350px;
+  padding: 1rem;
+  max-width: 66vw;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -38,35 +35,35 @@ h2 {
   font-weight: 200;
 }
 
-.plates {
+.items-list {
   margin: 0;
   padding: 0;
   text-align: left;
   list-style: none;
 }
 
-.plates li {
+.items-list li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
 }
 
-.plates label {
+.items-list label {
   flex: 1;
   cursor: pointer;
 }
 
-.plates input {
+.items-list input {
   display: none;
 }
 
-.plates input + label:before {
+.items-list input + label:before {
   content: "⬜️";
   margin-right: 10px;
 }
 
-.plates input:checked + label:before {
+.items-list input:checked + label:before {
   content: "🌮";
 }
 
@@ -78,4 +75,45 @@ h2 {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: hsla(360, 100%, 100%, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  text-justify:auto;
+  text-align: center;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.footWords {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footWords > p {
+  padding: 0 1rem 0 1rem;
+}
+
+a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: hsla(328, 100%, 54%, .5);
+  border-radius: 3rem;
+  /* padding: 0 .5rem 0 .5rem; */
+}
+
+p > a,
+p > a:visited {
+  color: black;
+}
+
+sub > a {
+  color: black;
 }
