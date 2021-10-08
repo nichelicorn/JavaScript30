@@ -40,7 +40,7 @@ function toggleDone(e) {
   populateList(items, itemsList);
 }
 
-function toggleSelect(e) {
+function toggleSelect() {
   // look at the items
   // if the item is not selected, select it
   if (selectAll.innerText === "Select all") {
@@ -50,10 +50,13 @@ function toggleSelect(e) {
     items.map(item => item.done = false);
     selectAll.innerText = "Select all";
   }
-  // if (selectAll.innerText === "Deselect all") {
-  //   items.map(item => item.done = false);
-  //   selectAll.innerText = "Select all";
-  // }
+  localStorage.setItem("items", JSON.stringify(items));
+  populateList(items, itemsList);
+}
+
+function clearAllFromList() {
+  items.splice(0);
+  localStorage.clear();
   populateList(items, itemsList);
 }
 
@@ -62,5 +65,4 @@ window.addEventListener("load", populateList(items, itemsList));
 addItems.addEventListener("submit", addItem); // want to listen for a submit event on a form - a click event doesn't necessarily pick up all needed info (?)
 itemsList.addEventListener("click", toggleDone); // listen for a click on the parent element to target a child element that doesn't yet exist on the page
 selectAll.addEventListener("click", toggleSelect);
-
-
+clearList.addEventListener("click", clearAllFromList);

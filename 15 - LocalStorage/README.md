@@ -1,12 +1,12 @@
 # JavaScript30 no. 15 - Local storage and event delegation
 
-[]()
+[Save your faves! ☘️](https://codepen.io/nichelicorn/pen/NWvKJoB)
 
 #### Goals
-* Create persistent state using local storage
-* Use event delegation to allow events to occur on elements added to the DOM after pageload
-* Add a button to clear the list / localStorage
-* Add a button to check all / uncheck all
+* ✅ Create persistent state using local storage
+* ✅ Use event delegation to allow events to occur on elements added to the DOM after pageload
+* ✅ Add a button to clear the list / localStorage
+* ✅ Add a button to check all / uncheck all
 
 #### What did I learn?
 * Can use `.this.querySelector()` to select an element based on an event

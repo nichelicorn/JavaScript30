@@ -1,5 +1,5 @@
 html {
-  background: url("https://images.pexels.com/photos/1382393/pexels-photo-1382393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center no-repeat;
+  background: url("https://images.pexels.com/photos/1702495/pexels-photo-1702495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center no-repeat;
   background-size: cover;
   min-height: 100vh;
   text-align: center;
@@ -20,19 +20,14 @@ body {
   box-sizing: inherit;
 }
 
-h1, h2 {
-  /* color: white; */
-  /* text-transform: uppercase; */
-}
-
 h1 {
   font-size: 3rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.77);
 }
 
 .wrapper {
   padding: 1rem;
-  max-width: 66vw;
+  max-width: 75%;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -79,10 +74,15 @@ h2 {
   margin-top: 20px;
 }
 
+button,
 .add-items input {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin: 1rem;
 }
 
 footer {
@@ -93,7 +93,7 @@ footer {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   margin: .5rem;
-  position: absolute;
+  position: inherit;
   padding: .5rem;
   text-justify:auto;
   text-align: center;
@@ -118,14 +118,10 @@ a {
 a:hover {
   background-color: seagreen;
   border-radius: 3rem;
-  /* padding: 0 .5rem 0 .5rem; */
 }
 
 p > a,
-p > a:visited {
-  color: inherit;
-}
-
+p > a:visited,
 sub > a {
   color: inherit;
 }
