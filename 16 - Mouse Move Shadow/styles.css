@@ -1,6 +1,7 @@
 html {
   color: black;
   font-family: sans-serif;
+  text-align: center;
 }
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,14 +17,14 @@ body {
 }
 
 h1 {
-  text-shadow: 10px 10px 0 rgba(0,0,0,1);
+  text-shadow: 10px 10px 20px orange;
   font-size: 100px;
 }
 
 footer {
-  background-color: orange;
+  background-color: rgba(131, 85, 0, 0.906);
   bottom: 0;
-  box-shadow: 0 0 0 10px orangered;
+  box-shadow: 0 0 0 10px rgba(255, 68, 0, 0.461);
   color:ghostwhite;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
@@ -51,7 +52,7 @@ a {
 }
 
 a:hover {
-  background-color: seagreen;
+  background-color: black;
   border-radius: 3rem;
 }
 

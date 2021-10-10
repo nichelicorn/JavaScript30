@@ -19,10 +19,10 @@ function shadow(e) {
   const yWalk = (( y / height * walk ) - ( walk / 2 ));
 
   text.style.textShadow = `
-    ${xWalk}px ${yWalk}px 20px orange,
-    ${xWalk * -1}px ${yWalk}px 20px yellow,
-    ${yWalk}px ${xWalk * -1}px 20px black,
-    ${yWalk * -1}px ${xWalk}px 20px ghostwhite
+    ${xWalk}px ${yWalk}px 20px yellow,
+    ${xWalk * -1}px ${yWalk}px 20px darkgoldenrod,
+    ${yWalk}px ${xWalk * -1}px 20px orange,
+    ${yWalk * -1}px ${xWalk}px 20px black
   `;
 }
 
