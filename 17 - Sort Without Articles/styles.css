@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-p {
+.p {
   background-color: rgba(255, 255, 255, 0.666);
   margin: 1rem;
   padding: 1rem;
