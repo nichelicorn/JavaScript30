@@ -87,23 +87,26 @@ const alphaSortedBands = bands.sort((a, b) => {
     a = a.slice(aThe.length);
   }
 
-  console.log("a reset <>>>", a)
+  console.log("a reset <>>>", a);
 
-  if (a.includes(anA)) {
+  if (b.includes(anA)) {
     // console.log("found an A");
-    a = a.slice(anA.length);
-  } else if (a.includes(anAn)) {
+    b = b.slice(anA.length);
+  } else if (b.includes(anAn)) {
     // console.log("found an An");
-    a = a.slice(anAn.length);
-  } else if (a.includes(aThe)) {
+    b = b.slice(anAn.length);
+  } else if (b.includes(aThe)) {
     // console.log("found a The");
-    // a.slice(0, aThe.length);
-    // console.log("a The <>>>", aThe);
-    a = a.slice(aThe.length);
+    b = b.slice(aThe.length);
   }
+
+  console.log("b reset <>>>", b);
   // turn the string into an array
   // if the first word is an article, remove it
   // continue checking alpha order
+
+  return (a > b) ? 1 : -1;  
+
 });
 
 
