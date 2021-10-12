@@ -1,35 +1,43 @@
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
-  background-size: cover;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  background: center url("https://images.pexels.com/photos/9543377/pexels-photo-9543377.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
   min-height: 100vh;
 }
 
 .bands {
   list-style: inside square;
   font-size: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.666);
   width: 50vw;
   margin: auto;
   padding: 0;
-  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 .bands li {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid fuchsia;
   padding: .5rem;
+}
+
+.bands ::marker {
+  content: "👻 ";
 }
 
 .bands li:last-child {
   border-bottom: 0;
 }
 
-a {
-  color: #ffc600;
-  text-decoration: none;
+button {
+  background-color: ghostwhite;
+  border-radius: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 40vw;
 }
 
 footer {
@@ -37,7 +45,6 @@ footer {
   bottom: 0;
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   color:ghostwhite;
-  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   margin: .5rem;
   position: inherit;
@@ -63,7 +70,7 @@ a {
 }
 
 a:hover {
-  background-color: seagreen;
+  background-color: indigo;
   border-radius: 3rem;
 }
 
