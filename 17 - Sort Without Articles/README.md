@@ -5,9 +5,10 @@
 #### Goals
 * Work with `Array.prototoype.sort()` to sort an array of data
   * Remove articles from the band names to sort alphabetically (ex. The Square Roots should be with the Ss, not the Ts)
+* Display sorted list in the window
 
 #### What did I learn?
-* 
+* Sorting algorithms can contain variables and multiple conditions
 
 #### References
 * [JavaScript30](https://javascript30.com/)
