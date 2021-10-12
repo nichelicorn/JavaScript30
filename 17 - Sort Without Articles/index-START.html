@@ -45,8 +45,134 @@
 
   <ul id="bands"></ul>
 
+  <footer>
+    <div class="footWords">
+      <p>Made with 💖 and 🍵 by <a href="https://github.com/nichelicorn">nichelicorn 🦄</a></p>
+      <p>A vanilla <a href="https://javascript30.com/">#JavaScript30</a> project, powered by Wes Bos</p>
+    </div>
+    <!-- <sub>Images by <a href="https://www.pexels.com/photo/green-fern-plants-in-greenhouse-1702495/">Cameron Casey from Pexels</a></sub> -->
+  </footer>
+
 <script>
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+// first, return the list sorted alphabetically, including the articles
+// const alphaSortedBands = bands.sort();
+
+// next, sort the bands alphabetically, without the articles
+// const alphaSortedBands = bands.sort((a, b) => {
+  // console.log("a <>>>", a);
+  // console.log("b <>>>", b);
+
+//   // remove articles from the band name before sorting
+//   // console.log("👻", a.startsWith("The"));
+//   if (a.startsWith("The" ) || a.startsWith("An") || a.startsWith("A ")) {
+//     console.log("👻 a starts with an article");
+//     // splice the article from the beginning of the string
+//     a = "pickle";
+//   }
+//   console.log("a <>>>", a);
+// });
+
+// const alphaSortedBands = bands.sort((a, b) => {
+//   console.log("a <>>>", a);
+//   console.log("b <>>>", b);
+//   // let article = "A" || "An" || "The";
+//   let article = "The" || "An" || "A"; // this doesn't work; only picks up the first value listed;
+
+//   // remove articles from the band name before sorting
+//   // console.log("👻", a.startsWith("The"));
+//   // if (a.startsWith("The" ) || a.startsWith("An") || a.startsWith("A ")) {
+//   //   console.log("👻 a starts with an article");
+//   //   // splice the article from the beginning of the string
+//   //   a = "pickle";
+//   // }
+//   if (a.includes(article)) {
+//     // console.log("a includes article <>>>", a);
+//     // console.log("<>>>", article);
+//     // a.slice(article);
+//     // a = a.split("").slice(article).join("");
+//     const num = article.length;
+//     const newString = a.substr(a.indexOf("") + num);
+
+    
+//     // console.log("newString", newString);
+//     // console.log("without article <>>>", a);
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+  
+// });
+
+const alphaSortedBands = bands.sort((a, b) => {
+  // console.log("a <>>>", a);
+  // console.log("b <>>>", b);
+  // if the first three characters are the or an  or a  , remove the first three characters
+  const anA = "A" + " ";
+  const anAn = "A" + "n" + " ";
+  const aThe = "T" + "h" + "e" + " ";
+  // let aLongString = a.split("");
+  // console.log("aLongString <>>>", aLongString); // an array of strings, each character of the movie name = 1 string
+  // let aShortString = aLongString.join("");
+  const aShortString = a.slice(0, 3);
+  console.log("aShortString <>>>", aShortString);
+  
+  // .includes doesn't work here
+  // console.log("includes A <>>>", a.includes(anA));
+  // console.log("includes An <>>>", a.includes(anAn));
+  // console.log("includes The <>>>", a.includes(aThe));
+
+  // console.log("the articles <>>>", anA, anAn, aThe);
+
+  // if (a.includes(anA) || a.includes(anAn) || a.includes(aThe)) {
+  //   console.log("sliced");
+  //   // depending on which condition is true, splice 2, 3, or 4 characters from the beginning of the string
+    
+  //   console.log("a <>>>", a);
+  
+  // } 
+
+  if (a.includes(anA)) {
+    // console.log("found an A");
+    a = a.slice(anA.length);
+  } else if (a.includes(anAn)) {
+    // console.log("found an An");
+    a = a.slice(anAn.length);
+  } else if (a.includes(aThe)) {
+    // console.log("found a The");
+    // a.slice(0, aThe.length);
+    // console.log("a The <>>>", aThe);
+    a = a.slice(aThe.length);
+  }
+
+  console.log("a reset <>>>", a)
+
+  if (a.includes(anA)) {
+    // console.log("found an A");
+    a = a.slice(anA.length);
+  } else if (a.includes(anAn)) {
+    // console.log("found an An");
+    a = a.slice(anAn.length);
+  } else if (a.includes(aThe)) {
+    // console.log("found a The");
+    // a.slice(0, aThe.length);
+    // console.log("a The <>>>", aThe);
+    a = a.slice(aThe.length);
+  }
+  // turn the string into an array
+  // if the first word is an article, remove it
+  // continue checking alpha order
+});
+
+
+console.log("alphabetical bands <>>>", alphaSortedBands);
+
+// array of band names
+// needs to be alpha-sorted
+// sorting should ignore grammatical articles
+// return newly sorted list
+
 
 
 </script>
