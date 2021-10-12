@@ -9,6 +9,13 @@ body {
   min-height: 100vh;
 }
 
+p {
+  background-color: rgba(255, 255, 255, 0.666);
+  margin: 1rem;
+  padding: 1rem;
+  width: 80vw;
+}
+
 .bands {
   list-style: inside square;
   font-size: 20px;
