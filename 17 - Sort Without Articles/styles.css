@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bands {
+  list-style: inside square;
+  font-size: 20px;
+  background-color: white;
+  width: 50vw;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.bands li {
+  border-bottom: 1px solid #efefef;
+  padding: .5rem;
+}
+
+.bands li:last-child {
+  border-bottom: 0;
+}
+
+a {
+  color: #ffc600;
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  color:ghostwhite;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: .5rem;
+  position: inherit;
+  padding: .5rem;
+  text-justify:auto;
+  text-align: center;
+}
+
+.footWords {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footWords > p {
+  padding: 0 1rem 0 1rem;
+}
+
+a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: seagreen;
+  border-radius: 3rem;
+}
+
+p > a,
+p > a:visited,
+sub > a {
+  color: inherit;
+}

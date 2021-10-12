@@ -1,59 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sort Without Articles</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sort Without Articles</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      min-height: 100vh;
-    }
+    <ul id="bandSection" class="bands"></ul>
+    <button id="sortBtn">Click to sort alphabetically!</button>
 
-    #bands {
-      list-style: inside square;
-      font-size: 20px;
-      background: white;
-      width: 500px;
-      margin: auto;
-      padding: 0;
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
-    }
-    
-    #bands li {
-      border-bottom: 1px solid #efefef;
-      padding: 20px;
-    }
-    
-    #bands li:last-child {
-      border-bottom: 0;
-    }
+    <footer>
+      <div class="footWords">
+        <p>Made with 💖 and 🍵 by <a href="https://github.com/nichelicorn">nichelicorn 🦄</a></p>
+        <p>A vanilla <a href="https://javascript30.com/">#JavaScript30</a> project, powered by Wes Bos</p>
+      </div>
+      <!-- <sub>Images by <a href="https://www.pexels.com/photo/green-fern-plants-in-greenhouse-1702495/">Cameron Casey from Pexels</a></sub> -->
+    </footer>
 
-    a {
-      color: #ffc600;
-      text-decoration: none;
-    }
+    <script type="text/javascript" src="index.js"></script>
 
-  </style>
-
-  <ul id="bands"></ul>
-
-  <footer>
-    <div class="footWords">
-      <p>Made with 💖 and 🍵 by <a href="https://github.com/nichelicorn">nichelicorn 🦄</a></p>
-      <p>A vanilla <a href="https://javascript30.com/">#JavaScript30</a> project, powered by Wes Bos</p>
-    </div>
-    <!-- <sub>Images by <a href="https://www.pexels.com/photo/green-fern-plants-in-greenhouse-1702495/">Cameron Casey from Pexels</a></sub> -->
-  </footer>
-
-<script type="text/javascript" src="index.js"></script>
-
-</body>
+  </body>
 </html>
