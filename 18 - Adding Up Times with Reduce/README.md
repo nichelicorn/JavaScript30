@@ -1,6 +1,6 @@
 # JavaScript30 no. 18 - 
 
-[A time to reduce ⏱]()
+[A time to reduce ⏱](https://codepen.io/nichelicorn/pen/OJjNGPK)
 
 #### Goals
 * Tally up time based on string values contained in HTML using `Array.prototype.reduce()`
