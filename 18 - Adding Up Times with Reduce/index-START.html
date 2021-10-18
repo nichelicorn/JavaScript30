@@ -177,11 +177,47 @@
     <li data-time="1:56">
       Video 57
     </li>
-    <li data-time="4:04">
+    <li data-time="4:14">
       Video 58
     </li>
   </ul>
+  <footer>
+    <div class="footWords">
+      <p>Made with 💖 and 🍵 by <a href="https://github.com/nichelicorn">nichelicorn 🦄</a></p>
+      <p>A vanilla <a href="https://javascript30.com/">#JavaScript30</a> project, powered by Wes Bos</p>
+    </div>
+    <sub>Images by <a href="https://www.pexels.com/photo/light-dawn-holiday-art-9543377/">Merlin Lightpainting from Pexels</a></sub>
+  </footer>
 <script>
+
+// const timeNodes = document.querySelectorAll("[data-time]"); // returns a NodeList; the [] will look for anything with this data attribute
+// const seconds = timeNodes.map(node => node.dataset.time); // can't do a map on a NodeList - this isn't a real array; must convert the nodeList to an array; can use the spread operator, or the Array.from method
+const timeNodes = Array.from(document.querySelectorAll("[data-time]"));
+
+// converts the time to seconds
+const seconds = timeNodes
+  .map(node => node.dataset.time)
+  .map(timeCode => {
+    // split string into minutes and seconds, then convert to a number, will call `parseFloat()` against each entry
+    const [mins, secs] = timeCode.split(":").map(parseFloat);
+    console.log("times", mins, secs);
+    return (mins * 60) + secs; // adds up the total number of seconds
+  })
+  .reduce((total, videoSecs) => total + videoSecs);
+
+let secondsLeft = seconds;
+// set the hours
+const hours = Math.floor(secondsLeft / 3600); // returns the whole number only
+secondsLeft = secondsLeft  % 3600; // reset the value of secondsRemaining to what is left after breaking out the hours
+// set the minutes
+const mins = Math.floor(secondsLeft / 60);
+secondsLeft = secondsLeft % 60;
+
+// console.log("secs remaining <>>>", secondsLeft);
+console.log("time left <>>>", hours, mins, secondsLeft);
+
+
+
 </script>
 </body>
 </html>
