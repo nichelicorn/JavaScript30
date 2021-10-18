@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  text-align: center;
+}
+
+.videos {
+  margin: 0;
+  padding: 0;
+}
+
+.video-card {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.333);
+  margin: .5rem;
+}
