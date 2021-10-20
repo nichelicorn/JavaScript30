@@ -1,11 +1,15 @@
 // 🔎 Query selectors
-const video = document.querySelector('.player');
-const canvas = document.querySelector('.photo');
-const ctx = canvas.getContext('2d');
-const strip = document.querySelector('.strip');
-const snap = document.querySelector('.snap');
+const video = document.querySelector(".player");
+const canvas = document.querySelector(".photo");
+const ctx = canvas.getContext("2d");
+const strip = document.querySelector(".strip");
+const snap = document.querySelector(".snap");
 const btnVideoStart = document.getElementById("btnVideoStart");
 const btnTakePhoto = document.getElementById("btnTakePhoto");
+// const radioBtns = document.querySelectorAll("filterSelect");
+const btnApplyFilter = document.getElementById("btnApplyFilter");
+const radioMenu = document.getElementById("radioMenu");
+const radioBtns = radioMenu.querySelectorAll("input");
 
 // ⚙️ Functions
 function getVideo() {
@@ -19,11 +23,13 @@ function getVideo() {
       video.play();
     })
     .catch(err => {
-      console.error("Uh oh! Something's not working. Did you grant access?", err);
+      console.error("Uh oh! Something's not working. Did you grant camera access?", err);
     })
 };
 
-function paintToCanvas() {
+function paintToCanvas(e) {
+  console.log("event <>>>", e);
+  // event is canplay
   const width = video.videoWidth;
   const height = video.videoHeight;
   // console.log("dimensions", width, "x", height);
@@ -33,26 +39,27 @@ function paintToCanvas() {
   // Display webcam view in the window
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
+    // Everything below this line applies to the filter effects
     // Take the pixels out
-    let pixels = ctx.getImageData(0, 0, width, height);
+    // let pixels = ctx.getImageData(0, 0, width, height);
     // Shift the color
     // pixels = redEffect(pixels);
     // pixels = rgbSplit(pixels);
     // ctx.globalAlpha = 0.1; // creates a stacked transparency effect
-    pixels = greenScreen(pixels);
+    // pixels = greenScreen(pixels);
     // Put the pixels back
-    ctx.putImageData(pixels, 0, 0);
-
-  }, 17);
+    // ctx.putImageData(pixels, 0, 0);
+  }, 22);
 };
 
 function redEffect(pixels) {
-  // iterate over each pixel and shift the color; use a for loop here - this is a nonstandard Array and doesn't have access to a .map() function
+  // iterate over each pixel and shift the color; use a for loop here - this is a nonstandard Array and doesn"t have access to a .map() function
   for( let i = 0; i < pixels.data.length; i += 4 ) {
     pixels.data[i] = pixels.data[i +  10];  // red
     pixels.data[i + 1] = pixels.data[i + 77];// green
     pixels.data[i + 2] = pixels.data[i + 13];// blue
   };
+
   return pixels;
 };
 
@@ -63,13 +70,12 @@ function rgbSplit(pixels) {
     pixels.data[i + 333] = pixels.data[i + 1]; // green
     pixels.data[i - 150] = pixels.data[i + 2];// blue
   };
+
   return pixels;
 };
 
 function greenScreen(pixels) {
   const levels = {}; // holds the min / max green
-
-  console.log("levels <>>>", levels);
 
   [...document.querySelectorAll(".rgb input")].forEach((input) => {
     levels[input.name] = input.value;
@@ -93,6 +99,48 @@ function greenScreen(pixels) {
   };
 
   return pixels;
+};
+
+function applyFilter() {
+  // ✅ create / set variables for filter effect
+  // ✅ add event listener to radio buttons
+  // ✅ set value of selected radio button
+  // re-render pixels based on filter selection
+
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  // console.log("dimensions", width, "x", height);
+  canvas.width = width;
+  canvas.height = height;
+
+  
+  let filterSelection;
+
+  radioBtns.forEach(btn => {
+    if (btn.checked) {
+      filterSelection = btn.value;
+    }
+  });
+
+  console.log("filter selection <>>>", filterSelection);
+
+  // Everything below this line applies to the filter effects
+  // Take the pixels out
+  let pixels = ctx.getImageData(0, 0, width, height);
+  // Shift the color
+  if (filterSelection === "redEffect") {
+    pixels = redEffect(pixels);
+  } else if (filterSelection === "rbgSplit") {
+    pixels = rgbSplit(pixels);
+  } else if (filterSelection === "greenScreen") {
+    pixels = rgbSplit(pixels);
+  } else if (filterSelection === "noEffect") {
+    pixels = ctx.getImageData(0, 0, width, height);
+  };
+  // ctx.globalAlpha = 0.1; // creates a stacked transparency effect
+  // Put the pixels back
+  ctx.putImageData(pixels, 0, 0);
+
 
 };
 
@@ -119,3 +167,4 @@ function takePhoto() {
 btnVideoStart.addEventListener("click", getVideo);
 video.addEventListener("canplay", paintToCanvas); // once the video is available for playback, the canvas will be activated!
 btnTakePhoto.addEventListener("click", takePhoto);
+btnApplyFilter.addEventListener("click", applyFilter);

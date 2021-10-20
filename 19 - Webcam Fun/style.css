@@ -99,3 +99,8 @@ p > a:visited,
 sub > a {
   color: inherit;
 }
+
+.hidden {
+  /* display: none; */
+  visibility: hidden;
+}

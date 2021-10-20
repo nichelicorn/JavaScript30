@@ -20,4 +20,4 @@
 * [JavaScript30](https://javascript30.com/)
 * [`URL.createObjectURL()` on MDN](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL)
 * [`HTMLMediaElement.srcObject` on MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject)
-* 
+* [`<input type="radio>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)

@@ -9,8 +9,24 @@
 
   <div class="photobooth">
     <div class="controls">
+      <button id="btnVideoStart">click to open photo booth</button>
       <button id="btnTakePhoto">Take Photo</button>
-      <div class="rgb">
+      
+      <!-- <form action=""> -->
+        <div id="radioMenu">
+          <input type="radio" id="redEffect" name="filterSelect" value="redEffect">
+          <label for="redEffect">Red Effect</label>
+          <input type="radio" id="rgbSplit" name="filterSelect" value="rgbSplit">
+          <label for="rgbSplit">RGB Split</label>
+          <input type="radio" id="greenScreen" name="filterSelect" value="greenScreen">
+          <label for="greenScreen">Green Screen</label>
+          <input type="radio" id="noEffect" name="filterSelect" value="noEffect">
+          <label for="noEffect">Remove Filters</label>
+          <button id="btnApplyFilter" type="submit">Apply Filter</button>
+        </div>
+      <!-- </form> -->
+
+      <div class="rgb hidden">
         <label for="rmin">Red Min:</label>
         <input type="range" min=0 max=255 name="rmin">
         <label for="rmax">Red Max:</label>
@@ -36,8 +52,6 @@
     <video class="player"></video>
     <div class="strip"></div>
   </div>
-
-  <button id="btnVideoStart">click to open photo booth</button>
 
   <audio class="snap" src="./snap.mp3" hidden></audio>
 
