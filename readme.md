@@ -26,7 +26,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 16 : [Shadowy movements 👻](https://codepen.io/nichelicorn/pen/MWvWzKV)
 * Day 17 : [A list to be sorted 📓](https://codepen.io/nichelicorn/pen/NWvqxEO)
 * Day 18 : [A Time to Reduce ⏱](https://codepen.io/nichelicorn/pen/OJjNGPK)
-<!-- * Day 19 : []() -->
+* Day 19 : []()
 <!-- * Day 21 : []() -->
 <!-- * Day 22 : []() -->
 <!-- * Day 23 : []() -->
