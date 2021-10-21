@@ -16,10 +16,12 @@ const btnRgbSplit = document.getElementById("btnRgbSplit");
 const btnGreenScreen = document.getElementById("btnGreenScreen");
 const btnNoEffect = document.getElementById("btnNoEffect");
 
-// const width = video.videoWidth;
-// const height = video.videoHeight;
-// canvas.width = width;
-// canvas.height = height;
+function setDimensions() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+};
 
 // ⚙️ Functions
 function getVideo() {
@@ -58,7 +60,7 @@ function paintToCanvas(e) {
     // pixels = greenScreen(pixels);
     // Put the pixels back
     // ctx.putImageData(pixels, 0, 0);
-  }, 22);
+  }, 17);
 };
 
 function redEffect(pixels) {
@@ -85,7 +87,7 @@ function paintRedEffect() {
     pixels = redEffect(pixels);
 
     ctx.putImageData(pixels, 0, 0);
-  }, 22);
+  }, 17);
 };
 
 function rgbSplit(pixels) {
@@ -97,6 +99,20 @@ function rgbSplit(pixels) {
   };
 
   return pixels;
+};
+
+function paintRgbSplit() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
+    pixels = rgbSplit(pixels);
+    ctx.putImageData(pixels, 0, 0);
+  }, 17);
 };
 
 function greenScreen(pixels) {
@@ -149,7 +165,7 @@ video.addEventListener("canplay", paintToCanvas); // once the video is available
 btnTakePhoto.addEventListener("click", takePhoto);
 // btnApplyFilter.addEventListener("click", applyFilter);
 btnRedEffect.addEventListener("click", paintRedEffect);
-
+btnRgbSplit.addEventListener("click", paintRgbSplit);
 
 
 
