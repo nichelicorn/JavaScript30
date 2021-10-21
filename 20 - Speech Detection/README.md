@@ -1,6 +1,6 @@
 # JavaScript30 no. 20 - Speech Detection
 
-[]()
+*This project requires a local server - download the repo to run locally 🙃*
 
 #### Goals
 * Set up speech recognition in the browser
