@@ -1,6 +1,6 @@
 # JavaScript30 no. 19 - Fancy Webcam
 
-[]()
+🚧 Still under construction! The next step is to add a feature to change filter effects with a button click. So far, this works on one effect, but causes glitches when attempting to switch to another effect.
 
 #### Goals
 * Add video to a canvas element
@@ -9,6 +9,7 @@
 * This project has a server - will need to run this one locally, so it can be tied to a secure origin (local host, or https://)
   * Uses `browser-sync` - a package that allows you to run a live server for your code
   * run `npm start` to start the server
+* Add feature to change filter effect on button click
 
 #### What did I learn?
 * Video is fed off the webcam (canvas context helps control this?)
