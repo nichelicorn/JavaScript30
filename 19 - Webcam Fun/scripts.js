@@ -28,8 +28,7 @@ function getVideo() {
 };
 
 function paintToCanvas(e) {
-  console.log("event <>>>", e);
-  // event is canplay
+  // console.log("event <>>>", e); // event is `canplay`
   const width = video.videoWidth;
   const height = video.videoHeight;
   // console.log("dimensions", width, "x", height);
@@ -107,42 +106,90 @@ function applyFilter() {
   // ✅ set value of selected radio button
   // re-render pixels based on filter selection
 
+  // Set canvas dimensions
   const width = video.videoWidth;
   const height = video.videoHeight;
-  // console.log("dimensions", width, "x", height);
   canvas.width = width;
   canvas.height = height;
 
-  
-  let filterSelection;
-
+  let filterSelection; // will hold the value of the selected radio input
   radioBtns.forEach(btn => {
     if (btn.checked) {
       filterSelection = btn.value;
     }
-  });
+  }); // reassigns `filterSelection` based on value of checked radio input
 
   console.log("filter selection <>>>", filterSelection);
 
-  // Everything below this line applies to the filter effects
-  // Take the pixels out
-  let pixels = ctx.getImageData(0, 0, width, height);
-  // Shift the color
-  if (filterSelection === "redEffect") {
-    pixels = redEffect(pixels);
-  } else if (filterSelection === "rbgSplit") {
-    pixels = rgbSplit(pixels);
-  } else if (filterSelection === "greenScreen") {
-    pixels = rgbSplit(pixels);
-  } else if (filterSelection === "noEffect") {
-    pixels = ctx.getImageData(0, 0, width, height);
-  };
-  // ctx.globalAlpha = 0.1; // creates a stacked transparency effect
-  // Put the pixels back
-  ctx.putImageData(pixels, 0, 0);
-
+  // Apply selected effect to the webcam player
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
+    // console.log("pixels???", pixels);
+    // Set filter effect
+    if (filterSelection === "redEffect") {
+      pixels = redEffect(pixels); // ✅
+      ctx.putImageData(pixels, 0, 0);
+    } else if (filterSelection === "rbgSplit") {
+      pixels = rgbSplit(pixels); // doesn't work
+      ctx.putImageData(pixels, 0, 0);
+    // } else if (filterSelection === "greenScreen") {
+    //   let sliders = document.querySelector(".rgb");
+    //   sliders.classList.remove("hidden");
+    //   pixels = greenScreen(pixels);
+    //   ctx.putImageData(pixels, 0, 0);
+    } else if (filterSelection === "noEffect") {
+      pixels = ctx.getImageData(0, 0, width, height); // trips the hell out
+      ctx.putImageData(pixels, 0, 0);
+    };
+    // ctx.putImageData(pixels, 0, 0);
+    
+  }, 22);
 
 };
+
+// (filterSelection === "redEffect") ? pixels = redEffect(pixels)
+//       : (filterSelection === "rbgSplit") ? pixels = rgbSplit(pixels)
+//       : (filterSelection === "greenScreen") ? pixels = greenScreen(pixels)
+//       : (filterSelection === "noEffect") ? pixels = ctx.getImageData(0, 0, width, height);
+    
+//   }, 22);
+
+// What i was working on last night 👇 this wasn't working -- missing the return on the canvas
+  // Take the pixels out
+  // let pixels = ctx.getImageData(0, 0, width, height);
+  // console.log("standard pixels");
+  // Shift the color
+  // if (filterSelection === "redEffect") {
+  //   pixels = redEffect(pixels);
+  // } else if (filterSelection === "rbgSplit") {
+  //   pixels = rgbSplit(pixels);
+  // } else if (filterSelection === "greenScreen") {
+  //   pixels = rgbSplit(pixels);
+  // } else if (filterSelection === "noEffect") {
+  //   pixels = ctx.getImageData(0, 0, width, height);
+  // };
+  // ctx.globalAlpha = 0.1; // creates a stacked transparency effect
+  // Put the pixels back
+  // ctx.putImageData(pixels, 0, 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function takePhoto() {
   // Play camera shutter soundclip
