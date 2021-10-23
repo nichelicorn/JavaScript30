@@ -1,11 +1,26 @@
 // 🌐 Global variables
-window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-recognition.interimResults = true; // populates as you are speaking
-// Create a break so that it will create a new paragraph each time speech ends
 let p = document.createElement("p");
 const words = document.getElementById("words");
 words.appendChild(p); // will add each new p to the DOM as speech continues
+
+// 🗣 Speech recognition variables
+// if (TypeError) {
+//   console.log("TypeError detected ❗️", TypeError.message);
+// };
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// let recognition = {};
+// function setRecognition() {
+//   recognition = new SpeechRecognition();
+//   recognition.interimResults = true; // populates as you are speaking
+//   console.log("recognition in the thing <>>>", recognition);
+//   return recognition;
+// };
+const recognition = new SpeechRecognition();
+recognition.interimResults = true; // populates as you are speaking
+// console.log("recognition", recognition);
+
+// 🔎 Query selectors
+// const btnToListen = document.getElementById("btnToListen");
 
 // ⚙️ Functions
 function printSpeech(e) {
@@ -33,7 +48,24 @@ function printSpeech(e) {
   console.log("🗣", transcript);
 };
 
+function checkForError(TypeError) {
+  // console.log("TypeError???", e);
+  console.log("testing for speech recognition 🗣");
+  if (TypeError) {
+    console.log("TypeError detected ❗️", TypeError.message);
+  };
+};
+
+// function startTyping() {
+//   recognition.start();
+//   btnToListen.style("visibility: hidden;");
+// };
+
 // 👂 Event listeners
+// window.addEventListener("load", setRecognition);
 recognition.start();
+// btnToListen.addEventListener("click", startTyping);
 recognition.addEventListener("end", recognition.start);
 recognition.addEventListener("result", printSpeech);
+// window.addEventListener("load", checkForError);
+
