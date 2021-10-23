@@ -1,0 +1,42 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background: linear-gradient(217deg, rgba(255, 153, 0, 0.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(134, 2, 32, 0.8), rgba(255, 140, 0, 0.155) 70.71%),
+  linear-gradient(336deg, rgba(9, 6, 0, 0.8), rgba(33, 2, 2, 0.742) 70.71%);
+  background: cover;
+  font-family:'Courier New', Courier, monospace ;  
+  font-weight: 200;
+  font-size: 20px;
+  height: 100vh;
+}
+
+.words {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 1rem 2rem 1rem 5rem;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 3rem;
+}
+
+p {
+  margin: 0 0 3rem;
+}
+
+.words:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #efe4e4;
+}

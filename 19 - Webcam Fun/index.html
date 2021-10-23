@@ -9,8 +9,31 @@
 
   <div class="photobooth">
     <div class="controls">
-      <button onClick="takePhoto()">Take Photo</button>
-<!--       <div class="rgb">
+      <button id="btnVideoStart">click to open photo booth</button>
+      <button id="btnTakePhoto">Take Photo</button>
+
+      <div>
+        <button id="btnRedEffect">Red Effect</button>
+        <button id="btnRgbSplit" >RGB Split</button>
+        <button id="btnGreenScreen" >Green Screen</button>
+        <button id="btnNoEffect" >Clear Filters</button>
+      </div>
+      
+      <!-- <form action=""> -->
+        <!-- <div id="radioMenu"> -->
+          <!-- <input type="radio" id="redEffect" name="filterSelect" value="redEffect"> -->
+          <!-- <label for="redEffect">Red Effect</label> -->
+          <!-- <input type="radio" id="rgbSplit" name="filterSelect" value="rgbSplit"> -->
+          <!-- <label for="rgbSplit">RGB Split</label> -->
+          <!-- <input type="radio" id="greenScreen" name="filterSelect" value="greenScreen"> -->
+          <!-- <label for="greenScreen">Green Screen</label> -->
+          <!-- <input type="radio" id="noEffect" name="filterSelect" value="noEffect"> -->
+          <!-- <label for="noEffect">Remove Filters</label> -->
+          <!-- <button id="btnApplyFilter" type="submit">Apply Filter</button> -->
+        <!-- </div> -->
+      <!-- </form> -->
+
+      <div class="rgb hidden" id="rbgSliders">
         <label for="rmin">Red Min:</label>
         <input type="range" min=0 max=255 name="rmin">
         <label for="rmax">Red Max:</label>
@@ -29,7 +52,7 @@
         <input type="range" min=0 max=255 name="bmin">
         <label for="bmax">Blue Max:</label>
         <input type="range" min=0 max=255 name="bmax">
-      </div> -->
+      </div>
     </div>
 
     <canvas class="photo"></canvas>
@@ -38,6 +61,15 @@
   </div>
 
   <audio class="snap" src="./snap.mp3" hidden></audio>
+
+  <footer>
+    <div class="footWords">
+      <p>Made with 💖 and 🍵 by <a href="https://github.com/nichelicorn">nichelicorn 🦄</a></p>
+      <p>A vanilla <a href="https://javascript30.com/">#JavaScript30</a> project, powered by <a href="https://wesbos.com/">Wes Bos</a></p>
+    </div>
+    <!-- <sub>Images by <a href="https://www.pexels.com/photo/light-dawn-holiday-art-9543377/">Merlin Lightpainting from Pexels</a></sub> -->
+  </footer>
+
 
   <script src="scripts.js"></script>
 

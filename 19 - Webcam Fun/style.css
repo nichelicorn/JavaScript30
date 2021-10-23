@@ -58,3 +58,49 @@ html {
 .strip a:nth-child(5n+3) img { transform: rotate(8deg); }
 .strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
 .strip a:nth-child(5n+5) img { transform: rotate(12deg); }
+
+
+footer {
+  background-color: black;
+  bottom: 0;
+  color:ghostwhite;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: .5rem;
+  position: inherit;
+  padding: .5rem;
+  text-justify:auto;
+  text-align: center;
+}
+
+.footWords {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.footWords > p {
+  padding: 0 1rem 0 1rem;
+}
+
+a {
+  color: deeppink;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: deeppink;
+  border-radius: 3rem;
+}
+
+p > a,
+p > a:visited,
+sub > a {
+  color: inherit;
+}
+
+.hidden {
+  /* display: none; */
+  visibility: hidden;
+}
