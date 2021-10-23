@@ -1,5 +1,7 @@
 # JavaScript30 no. 19 - Fancy Webcam
 
+*This project requires a local server - download the repo to run locally 🙃*
+
 🚧 Still under construction! The next step is to add a feature to change filter effects with a button click. So far, this works on one effect, but causes glitches when attempting to switch to another effect.
 
 #### Goals
