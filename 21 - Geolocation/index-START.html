@@ -59,6 +59,21 @@
     /*Compass: https://thenounproject.com/search/?q=compass&i=592352*/
   </style>
   <script>
+      const arrow = document.querySelector(".arrow");
+      const speed = document.querySelector(".speed");
+      
+      navigator.geolocation.watchPosition((data) => {
+          console.log("data <>>>", data);
+          speed.textContent = data.coords.speed;
+          arrow.style.transform = `
+            rotate(${data.coords.heading}deg)
+          `; // successCallback, what happens when you ARE granted device location services
+      }, (err) => {
+          console.err(err);
+          alert("Please grant access to location services to use this app 🗺");
+      }); // watches the position of the device over time and will continually return data
+      
+      
   </script>
 </body>
 </html>
