@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
 }
 
 *, *:before, *:after {
@@ -9,7 +11,6 @@ html {
 body {
   min-height: 100vh;
   margin: 0; /* Important! */
-  font-family: sans-serif;
   background:
     linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
     linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
@@ -17,9 +18,18 @@ body {
     linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
 }
 
+h1 {
+  text-align: center;
+}
+
+.end-stanza {
+  text-align: right;
+}
+
 .wrapper {
   margin: 0 auto;
-  max-width: 500px;
+  /* max-width: 500px; */
+  max-width: 50vw;
   font-size: 20px;
   line-height: 2;
   position: relative;
