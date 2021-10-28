@@ -1,7 +1,8 @@
 # JavaScript30 no. 21 - Geolocation
 
-<!-- *This project requires a local server - download the repo to run locally 🙃* -->
-[]()
+*This project requires a local server - download the repo to run locally. 🙃*
+*Then, `npm i` in the terminal to install the server.*
+*Then, `npm start` to start the server. The terminal will prompt you with the url to access the project in your browser.*
 
 #### Goals
 * Get geolocation information
