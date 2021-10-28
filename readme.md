@@ -29,7 +29,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 19 : Photo Booth! 🚧 - Download repo to run on local server
 * Day 20 : Speech Detection 🗣👂 - Download repo to run on local server
 * Day 21 : Stats acquired using geolocation 🐓💨 - Download repo to run on local server
-* Day 22 : []()
+* Day 22 : [Dancing highlights! 💃🕺](https://codepen.io/nichelicorn/pen/oNewRye)
 <!-- * Day 23 : []() -->
 <!-- * Day 24 : []() -->
 <!-- * Day 25 : []() -->

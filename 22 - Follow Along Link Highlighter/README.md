@@ -1,6 +1,6 @@
 # JavaScript30 no. 21 - Geolocation
 
-[]()
+[Dancing highlights!](https://codepen.io/nichelicorn/pen/oNewRye)
 
 <!-- *This project requires a local server - download the repo to run locally. 🙃* -->
 <!-- *Then, `npm i` in the terminal to install the server.* -->
