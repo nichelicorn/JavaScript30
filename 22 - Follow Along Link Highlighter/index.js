@@ -2,8 +2,8 @@
 const triggers = document.querySelectorAll("a"); // get all the triggers, links in this case
 const highlight = document.createElement("span");
 
-// highlight.classList.add("highlight");
-// document.body.append(highlight);
+highlight.classList.add("highlight");
+document.body.append(highlight);
 
 function highlightLink() {
   // console.log("highlight!", this); // logs the element triggering the function
