@@ -1,8 +1,8 @@
-// Query selectors / modifiers
+// 🔎  Query selectors / modifiers
 const nav = document.querySelector("#main");
 const topOfNav = nav.offsetTop;
 
-// Functions
+// ⚙️ Functions
 function fixNav() {
   // sets nav bar to a fixed position once the header has been scrolled through
   const scrollDoc = document.body;
