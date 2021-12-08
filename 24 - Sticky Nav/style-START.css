@@ -25,6 +25,10 @@ body {
   transition: transform 0.5s;
 }
 
+.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
 header {
   text-align: center;
   height: 50vh;
@@ -50,6 +54,12 @@ nav {
   z-index: 1;
 }
 
+/* fixed elements no longer take up space on the page; rather, they float above the document; Wes solves this issue by adding padding to the body */
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px forestgreen;
+}
+
 nav ul {
   margin: 0;
   padding:0;
@@ -69,9 +79,13 @@ li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all 5s;
   font-weight: 600;
   font-size: 30px;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
 }
 
 li.logo a {
