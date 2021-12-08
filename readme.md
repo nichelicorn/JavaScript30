@@ -31,7 +31,7 @@ Sign up for the course at [https://JavaScript30.com](https://JavaScript30.com)
 * Day 21 : Stats acquired using geolocation 🐓💨 - Download repo to run on local server
 * Day 22 : [Dancing highlights! 💃🕺](https://codepen.io/nichelicorn/pen/oNewRye)
 <!-- * Day 23 : []() -->
-<!-- * Day 24 : []() -->
+* Day 24 : [Make the Nav Stay Put!](https://codepen.io/nichelicorn/pen/gOGMgxO)
 <!-- * Day 25 : []() -->
 <!-- * Day 26 : []() -->
 <!-- * Day 27 : []() -->
