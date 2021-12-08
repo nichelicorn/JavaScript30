@@ -16,7 +16,7 @@
 
 #### References
 * [JavaScript30](https://javascript30.com/)
-* [The Artwork of Tya Talisa Anthony](http://www.tyaanthony.com/home)
+* [The Artwork of Tya Alisa Anthony](http://www.tyaanthony.com/home)
 * [Poetry Foundation](https://www.poetryfoundation.org/)
 * [Tracie Morris, Harryette Mullen, Jo Stewart, and Yolanda Wisher on the Collaborative Process](https://www.poetryfoundation.org/poetrymagazine/articles/156687/tracie-morris-harryette-mullen-jo-stewart-and-yolanda-wisher-on-the-collaborative-process)
 * [303 Magazine: 400+ Black Owned Businesses to Support in and Around Denver](https://303magazine.com/2020/06/black-owned-businesses-denver/)
